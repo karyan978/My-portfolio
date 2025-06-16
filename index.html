@@ -7,10 +7,19 @@
     <title>Aryan Kumar - Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abel&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Gabarito:wght@400..900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Permanent+Marker&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>tailwind.config = { theme: { extend: { colors: { primary: '#4F46E5', secondary: '#10B981' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,394 +30,294 @@
 </head>
 
 <body class="bg-gray-50">
-    <!-- Navigation Bar -->
-    <nav class="bg-black shadow-md bg-blur-sm fixed top-0 w-full z-50 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center z-10">
-                    <span class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
-                            class="w-50 h-14 rounded-full"></span>
-                    <div>
-                        <span class="text-3xl font-['Pacifico'] text-white">ryan</span>
+    <div id="main">
+        <!-- Navigation Bar -->
+        <nav class="bg[#0E2148] shadow-md bg-blur-sm fixed top-0 w-full z-50 text-white" style="z-index:999;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center z-10">
+                        <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
+                                class="w-50 h-14 rounded-full"></span>
+                        <span id="name" class="font-['Pacifico'] text-2xl text-white">ryan</span>
                     </div>
-                </div>
-                <div style="height: 50px; width: 150px; background-color: rgba(234, 255, 0, 0.342); position: absolute; z-index: 1;"
-                    class="blur-xl"></div>
-                <div class=" hidden md:flex flex items-center space-x-4 font['Rowdies']">
-                    <a href="#home" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
-                    <a href="#about" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#skills" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Skills</a>
-                    <a href="#projects"
-                        class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Projects</a>
-                    <a href="#contact"
-                        class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
-                    <button id="darkModeToggle"
-                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
-                        <i class="ri-moon-line ri-lg"></i>
-                    </button>
-                </div>
-                <!-- <div class="md:bg-gray w-30"> -->
-                <div class="w-8 h-8 flex items-center justify-center md:hidden cursor-pointer" id="mobile-menu-button">
-                    <i class="ri-menu-line ri-lg text-gray-700"></i>
-                </div>
-
-                <div id="mobile-menu" class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
-                    <a href="#home"
-                        class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Home</a>
-                    <a href="#about"
-                        class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">About</a>
-                    <a href="#skills"
-                        class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Skills</a>
-                    <a href="#projects"
-                        class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">projects</a>
-                    <a href="#contact"
-                        class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Contact</a>
-                </div>
-                <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
-                    <button id="darkModeToggle"
-                        class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
-                        <i class="ri-moon-line ri-lg"></i>
-                    </button>
-                </div>
-                <!-- </div> -->
-            </div>
-        </div>
-    </nav>
-    <!-- Hero Section -->
-    <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black">
-        <div class="floating-icons">
-            <i class="ri-html5-line ri-3x" style="top: 10%; left: 10%;"></i>
-            <i class="ri-css3-line ri-3x" style="top: 20%; left: 30%;"></i>
-            <i class="ri-javascript-line ri-3x" style="top: 15%; left: 50%;"></i>
-            <i class="ri-reactjs-line ri-3x" style="top: 25%; left: 70%;"></i>
-            <i class="ri-nodejs-line ri-3x" style="top: 35%; left: 20%;"></i>
-            <i class="ri-database-2-line ri-3x" style="top: 45%; left: 40%;"></i>
-            <i class="ri-github-line ri-3x" style="top: 50%; left: 53%;"></i>
-            <i class="ri-terminal-box-line ri-3x" style="top: 65%; left: 80%;"></i>
-            <i class="ri-tailwind-css-fill" style="top: 70%; right: 10%; height: 50%; width: 50%;"></i>
-            <img src="asset/gsap.svg" alt=""
-                style="height: 12%; width: 12%; position: absolute; top: 20%; right: 7%; opacity: 0.3;">
-            <img src="asset/three-js-icon.svg" alt=""
-                style="height: 12%; width: 12%; color: lightcoral; position: absolute; top: 75%; right: 45%;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(255, 196, 0, 0.11); border-radius: 50%; position: absolute; top: 15%; right: 7%; z-index: 1;">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl font-bold text-white mb-2">Hi, I'm <span class="text-primary">Aryan
-                            Kumar</span></h1>
-                    <div id="role-switcher">
-                        <h2 id="role" class="text-2xl font-semibold z-10 text-white mb-4">Full Stack Developer</h2>
-                    </div>
-                    <p class="text-l-white mb-6">Crafting seamless web experiences from front to back.</p>
-                    <div class="flex space-x-4">
-                        <a href="#"
-                            class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
-                            Resume</a>
-                        <div class="h-20 w-20 rounded-full absolute top-4/3 bg-opacity-50 blur-sm z-1 bg-red-200"></div>
+                    <div style="height: 50px; width: 150px; background-color: rgba(234, 255, 0, 0.342); position: absolute; z-index: 1;"
+                        class="blur-xl"></div>
+                    <div class=" hidden md:flex flex items-center space-x-4 font['Rowdies']" id="desktop-menu">
+                        <a href="#home" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#skills" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#projects"
+                            class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Projects</a>
                         <a href="#contact"
-                            class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all cursor-pointer">Contact
-                            Me</a>
+                            class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
+                        <button id="darkModeToggle"
+                            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
+                            <i class="ri-moon-line ri-lg"></i>
+                        </button>
                     </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0"
-                        id="image-container">
-                        <img id="profile-image" src="Aryan.jpg" alt="Aryan Kumar" class="w-full h-full object-cover">
+                    <!-- <div class="md:bg-gray w-30"> -->
+                    <div class="w-8 h-8 flex items-center justify-center md:hidden cursor-pointer"
+                        id="mobile-menu-button">
+                        <i class="ri-menu-line ri-lg text-gray-700"></i>
                     </div>
+
+                    <div id="mobile-menu" class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
+                        <a href="#home"
+                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Home</a>
+                        <a href="#about"
+                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">About</a>
+                        <a href="#skills"
+                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Skills</a>
+                        <a href="#projects"
+                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">projects</a>
+                        <a href="#contact"
+                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Contact</a>
+                    </div>
+                    <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
+                        <button id="darkModeToggle"
+                            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
+                            <i class="ri-moon-line ri-lg"></i>
+                        </button>
+                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white relative">
-        <div class="blur-xl"
-            style="height: 300px; width: 300px; background-color: rgba(0, 162, 255, 0.1); border-radius: 50%; position: absolute; top: 20%; left: 4%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(217, 255, 0, 0.164); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(207, 134, 8, 0.164); border-radius: 50%; position: absolute; top: 5%; right: 3%; z-index: 1;">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="shadow-lg" style="height: 60%; width: 60%; border-radius: 50%; overflow: hidden;">
-
-                    <img class="rounded-full w-50" src="asset/about.avif" alt="">
-                </div>
-                <div class="h-90 w-90 rounded-full absolute left-60 top-10 bg-opacity-10 blur bg-black-200"></div>
-
-                <div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Who I Am</h3>
-                        <p class="text-gray-600 mb-6">Hi, I’m Aryan Kumar, a full-stack developer with a passion for
-                            interactive web design.
-                            I built this Pani Patasha website using HTML, CSS, GSAP, Three.js, and PHP to create a
-                            vibrant, animated experience.
-                            My aim was to bring the flavor of Indian street food into a modern, tech-powered space.
-                            With smooth animations and 3D visuals, I’ve made sure it’s both tasty and techy – just like
-                            the real thing!
-
-                        </p>
-                        <div class="flex space-x-4 mt-8">
+        </nav>
+        <!-- Hero Section -->
+        <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black-900">
+            <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
+                style="width:1440px; height: 900px"></div>
+            <div class="floating-icons">
+                <i class="ri-html5-line ri-3x" style="top: 10%; left: 10%;"></i>
+                <i class="ri-css3-line ri-3x" style="top: 20%; left: 30%;"></i>
+                <i class="ri-javascript-line ri-3x" style="top: 15%; left: 50%;"></i>
+                <i class="ri-reactjs-line ri-3x" style="top: 25%; left: 70%;"></i>
+                <i class="ri-nodejs-line ri-3x" style="top: 35%; left: 20%;"></i>
+                <i class="ri-database-2-line ri-3x" style="top: 45%; left: 40%;"></i>
+                <i class="ri-github-line ri-3x" style="top: 50%; left: 53%;"></i>
+                <i class="ri-terminal-box-line ri-3x" style="top: 65%; left: 80%;"></i>
+                <i class="ri-tailwind-css-fill" style="top: 70%; right: 10%; height: 50%; width: 50%;"></i>
+                <img src="asset/gsap.svg" alt=""
+                    style="height: 12%; width: 12%; position: absolute; top: 20%; right: 7%; opacity: 0.3;">
+                <img src="asset/three-js-icon.svg" alt=""
+                    style="height: 12%; width: 12%; color: lightcoral; position: absolute; top: 75%; right: 45%;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(255, 196, 0, 0.11); border-radius: 50%; position: absolute; top: 15%; right: 7%; z-index: 1;">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0 text-white" style="z-index: 99;">
+                        <h1 class="text-4xl font-bold font-cormorant text-white mb-2">Hi, I'm <span class="text-primary font-cormorant">Aryan
+                                Kumar</span></h1>
+                        <div id="role-switcher">
+                            <h2 id="role" class="text-2xl font-semibold z-10 text-white mb-4">Full Stack Developer</h2>
+                        </div>
+                        <p class="text-white mb-6">Crafting seamless web experiences from front to back.</p>
+                        <div class="flex space-x-4">
                             <a href="#"
-                                class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all cursor-pointer">Download
+                                class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
                                 Resume</a>
+                            <div class="h-20 w-20 rounded-full absolute top-4/3 bg-opacity-50 blur-sm z-1 bg-red-200">
+                            </div>
+                            <a href="#contact"
+                                class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all cursor-pointer">Contact
+                                Me</a>
                         </div>
                     </div>
-
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4 mt-5">Education & Experience</h3>
-                    <div class="mb-6">
-                        <div class="flex items-center mb-2">
-                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
-                                <i class="ri-graduation-cap-line ri-lg text-primary"></i>
-                            </div>
-                            <div
-                                class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200">
-                            </div>
-
-                            <div>
-                                <h4 class="font-medium text-gray-800">BCA in Computer Science</h4>
-                                <p class="text-sm text-gray-600">Nalanda College, Bhihar-Sharif, 2024-2027</p>
-                            </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0"
+                            id="image-container">
+                            <img id="profile-image" src="asset/Aryan-Kumar.png" alt="Aryan Kumar"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
-                    <!-- <div class="mb-6">
-                        <div class="flex items-center mb-2">
-                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
-                                <i class="ri-briefcase-line ri-lg text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Web Development Intern</h4>
-                                <p class="text-sm text-gray-600">TechSolutions India, Jun 2022 - Aug 2022</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex items-center mb-2">
-                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
-                                <i class="ri-code-box-line ri-lg text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-800">Freelance Developer</h4>
-                                <p class="text-sm text-gray-600">Self-employed, 2021 - Present</p>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <div class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200"></div>
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white relative">
+            <div class="blur-xl"
+                style="height: 300px; width: 300px; background-color: rgba(0, 162, 255, 0.1); border-radius: 50%; position: absolute; top: 20%; left: 4%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(217, 255, 0, 0.164); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(207, 134, 8, 0.164); border-radius: 50%; position: absolute; top: 5%; right: 3%; z-index: 1;">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div id="profile-image" class="shadow-lg"
+                        style="height: 90%; width: 54%; border-radius: 50%; overflow: hidden; margin-left: 100px; border: 2px solid blue;">
 
-    <section id="skills" class="relative py-16 bg-gray-50">
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(255, 0, 8, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(13, 0, 255, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(220, 235, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Frontend Skills -->
+                        <img class="rounded-full" src="asset/Aryan-Kumar.png" alt="">
+                    </div>
+                    <div class="h-90 w-90 rounded-full absolute left-60 top-10 bg-opacity-10 blur bg-black-200"></div>
+
+                    <div id="about-content">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Who I Am</h3>
+                            <p class="text-gray-600 mb-6">Hi, I’m Aryan Kumar, a full-stack developer with a passion for
+                                interactive web design.
+                                I built this Pani Patasha website using HTML, CSS, GSAP, Three.js, and PHP to create a
+                                vibrant, animated experience.
+                                My aim was to bring the flavor of Indian street food into a modern, tech-powered space.
+                                With smooth animations and 3D visuals, I’ve made sure it’s both tasty and techy – just
+                                like
+                                the real thing!
+
+                            </p>
+                            <div class="flex space-x-4 mt-8">
+                                <a href="#"
+                                    class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all cursor-pointer">Download
+                                    Resume</a>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 mt-5">Education & Experience</h3>
+                        <div class="mb-6">
+                            <div class="flex items-center mb-2">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+                                    <i class="ri-graduation-cap-line ri-lg text-primary"></i>
+                                </div>
+                                <div
+                                    class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200">
+                                </div>
+
+                                <div>
+                                    <h4 class="font-medium text-gray-800">BCA in Computer Science</h4>
+                                    <p class="text-sm text-gray-600">Nalanda College, Bhihar-Sharif, 2024-2027</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <div class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200"></div>
+
+        <section id="skills" class="relative py-16 bg-gray-50">
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(255, 0, 8, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(13, 0, 255, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(220, 235, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
+
+                <!-- frontend skills -->
                 <div class="bg-white p-6 rounded-lg shadow-md skill-card">
                     <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
                         <i class="ri-layout-line ri-lg text-primary"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Frontend</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">React</span>
-                                <span class="text-sm font-medium text-gray-700">90%</span>
+                    <hr class="mb-4">
+                    <div class="flex flex-wrap flex-row gap-10">
+                        <div class="w-20 h-20 flex items-center justify-center bg-red-400 rounded-full mb-4">
+                            <i class="ri-html5-line text-5xl text-white"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-400 rounded-full mb-4">
+                            <i class="ri-css3-line text-5xl text-white"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-600 rounded-full mb-4">
+                            <i class="ri-javascript-line text-5xl text-yellow-400"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-reactjs-line text-5xl text-sky-400"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-tailwind-css-fill text-5xl text-sky-400"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-md mb-4">
+                            <i class="ri-bootstrap-line text-5xl text-white"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-black rounded-full mb-4">
+                            <img src="asset/gsap.svg" alt="" class="w-12 h-12 ">
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-300 rounded-full mb-4">
+                            <img src="asset/three-js-icon.svg" alt="" class="w-12 h-12 ">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- backend skills -->
+
+                    <div class="bg-white p-6 rounded-lg shadow-md mt-5 skill-card">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-server-line ri-lg text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend</h3>
+                        <hr class="mb-4">
+                        <div class="flex flex-wrap flex-row gap-10">
+                            <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-full mb-4">
+                                <i class="ri-php-line text-5xl text-white"></i>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 90%"></div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-lg mb-4">
+                                <i class="ri-nodejs-line text-5xl text-green-500"></i>
                             </div>
                         </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">HTML/CSS</span>
-                                <span class="text-sm font-medium text-gray-700">95%</span>
+
+
+                    </div>
+
+                    <!-- database -->
+
+                    <div class="bg-white p-6 rounded-lg shadow-md mt-5 skill-card">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-database-2-line ri-lg text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Database</h3>
+                        <hr class="mb-4">
+                        <div class="flex flex-wrap flex-row gap-10">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-full mb-4">
+                                <img src="asset/mysql.png" alt="" class="w-12 h-12 ">
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 95%"></div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-blue-200 rounded-full mb-4">
+                                <img src="asset/mongodb.png" alt="" class="w-12 h-12 ">
                             </div>
                         </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">JavaScript</span>
-                                <span class="text-sm font-medium text-gray-700">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 85%"></div>
-                            </div>
+
+
+                    </div>
+
+                    <!-- tools -->
+
+                    <div class="bg-white p-6 rounded-lg shadow-md mt-5 skill-card">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-tools-line ri-lg text-primary"></i>
                         </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Tailwind CSS</span>
-                                <span class="text-sm font-medium text-gray-700">80%</span>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools</h3>
+                        <hr class="mb-4">
+                        <div class="flex flex-wrap flex-row gap-10">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
+                                <i class="ri-github-line text-5xl text-white"></i>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 80%"></div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
+                                <img src="asset/vsCode.png" alt="" class="w-12 h-12 ">
+                            </div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-yellow-300 rounded-full mb-4">
+                                <img src="asset/docker.png" alt="" class="w-12 h-12 ">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="h-30 w-30 rounded-full absolute left-60 top-40 bg-opacity-10 blur z-1 bg-yellow-200"></div>
 
-
-                <!-- Backend Skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <i class="ri-server-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Node.js</span>
-                                <span class="text-sm font-medium text-gray-700">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Express.js</span>
-                                <span class="text-sm font-medium text-gray-700">80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">PHP</span>
-                                <span class="text-sm font-medium text-gray-700">70%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">RESTful APIs</span>
-                                <span class="text-sm font-medium text-gray-700">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Database Skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <i class="ri-database-2-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Database</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">MySQL</span>
-                                <span class="text-sm font-medium text-gray-700">80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">MongoDB</span>
-                                <span class="text-sm font-medium text-gray-700">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Firebase</span>
-                                <span class="text-sm font-medium text-gray-700">75%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">SQL</span>
-                                <span class="text-sm font-medium text-gray-700">80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools Skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <i class="ri-tools-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Git/GitHub</span>
-                                <span class="text-sm font-medium text-gray-700">90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">VS Code</span>
-                                <span class="text-sm font-medium text-gray-700">95%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Postman</span>
-                                <span class="text-sm font-medium text-gray-700">85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Docker</span>
-                                <span class="text-sm font-medium text-gray-700">70%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-primary" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
+    </div>
     </section>
 
     <!-- Projects Section -->
@@ -417,7 +326,7 @@
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover1">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project1.png" alt="Pani-Patasha" class="w-full h-full object-cover">
                     </div>
@@ -447,7 +356,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover2">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project2.png" alt="e-shop" class="w-full h-full object-cover">
                     </div>
@@ -476,7 +385,7 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover3">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
                     </div>
@@ -508,6 +417,55 @@
         </div>
     </section>
 
+    <!-- resume -->
+      <!-- <div class="h-50 w-50 felx justify-center bg-black">
+     <div class="text-center text-black d-flex justify-center pb-5">
+             <div class="h-60 w-50 bg-transparent backdrop-blur-sm border-radius-lg border-white border-2">
+                <span>My resume</span>
+                <h3>I Would Love to make your Ideas real</h3>
+                <p> I’m a Full Stack Developer who builds fast, responsive, and dynamic websites — from frontend design
+                    to backend logic.</p>
+                    <div class="mt-20">
+                <a href="#"
+                    class="bg-primary text-white px-3  py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
+                    Resume</a>
+                    </div>
+                    </div> -->
+    <!-- </div>
+    </div> -->
+
+    <div class="h-screen0 pt-5 relative z-10" id="resume">
+        <div class="w-[50%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto perspective-500">
+            <div id="resume-container">
+                <div id="img1" class="img transform transition duration-500 mt-20 " style=" transform-origin: top;">
+                    <img src="asset/1.png" alt="">
+                </div>
+                <div id="img2" class="img transform transition duration-500"
+                    style=" transform-origin: top; transform: rotateX(-90deg);">
+                    <img src="asset/resume2.png" alt="">
+                </div>
+                <div id="img3" class="img pb-5 transform transition duration-500"
+                    style=" transform-origin: top; transform: rotateX(-90deg);">
+                    <img src="asset/resume1.png" alt="">
+                </div>
+            </div>
+            <div class="text text-center font-bold text-4xl font-bold text-black mb-2 absolute"
+                id="text" style="z-index: 99;">
+                <h1 class="h1" style="z-index: 99;">create by<br> Aryan kumar</h1>
+
+                 <div class="">
+                <a href="#"
+                    class="bg-primary text-white px-2  py-2 rounded-button font-medium text-xl hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
+                    Resume</a>
+                    </div>
+            </div>
+        </div>
+        <div class="h-screen0 w-[100%] bg-[#034C53] fixed overlay absolute top-0 bottom-0 opacity-0" style="z-index: 20;"></div>
+
+    </div>
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="relative py-16 bg-gray-50">
         <div class="blur-xl"
@@ -524,8 +482,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="z-10">
                     <div>
-                        <h1 class="text-3xl font-bold mb-4">Say Hello 👋</h1>
-                        <h2 class="text-lg md:text-2xl  mb-6">Have a project in mind? Let’s bring it to life. Contact me today!
+                        <h1 id="contact-animation" class="text-3xl font-bold mb-4">Say Hello 👋</h1>
+                        <h2 id="contact-animation" class="text-lg md:text-2xl  mb-6">Have a project in mind? Let’s bring
+                            it to life. Contact me today!
                         </h2>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
@@ -536,8 +495,8 @@
                                 <i class="ri-mail-line ri-lg text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-800">Email</h4>
-                                <p class="text-gray-600">karyan4537@gmail.com</p>
+                                <h4 id="contact-animation" class="font-medium text-gray-800">Email</h4>
+                                <p id="contact-animation" class="text-gray-600">karyan4537@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -546,8 +505,8 @@
                                 <i class="ri-phone-line ri-lg text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-800">Phone</h4>
-                                <p class="text-gray-600">+91 7564954095</p>
+                                <h4 id="contact-animation" class="font-medium text-gray-800">Phone</h4>
+                                <p id="contact-animation" class="text-gray-600">+91 7564954095</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -556,13 +515,13 @@
                                 <i class="ri-map-pin-line ri-lg text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium text-gray-800">Location</h4>
-                                <p class="text-gray-600">Bhihar, India</p>
+                                <h4 id="contact-animation" class="font-medium text-gray-800">Location</h4>
+                                <p id="contact-animation" class="text-gray-600">Bhihar, India</p>
                             </div>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Connect With Me</h3>
+                        <h3 id="contact-animation" class="text-xl font-semibold text-gray-800 mb-4">Connect With Me</h3>
                         <div class="flex space-x-4">
                             <a href="#"
                                 class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
@@ -584,7 +543,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="bg-white p-6 rounded-lg shadow-md" style="z-index: 99;">
+                    <div class="bg-white p-6 rounded-lg shadow-md" style="z-index: 99;" id="contact-form">
                         <h3 class="text-xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
                         <form id="contactForm">
                             <div class="mb-4">
@@ -624,61 +583,57 @@
         </div>
     </section>
     <!-- Footer -->
-     
+
     <footer class="relative text-white bg-black md:bg-transparent sm:bg-black py-8">
         <div class="absolute bottom-0 left-0 w-full h-50 md:h-100">
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-          .path-0{
-            animation:pathAnim-0 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-0{
-            0%{
-              d: path("M 0,400 L 0,100 C 65.85645933014354,80.33492822966508 131.71291866028707,60.66985645933015 235,72 C 338.2870813397129,83.33014354066985 479.0047846889952,125.65550239234449 575,127 C 670.9952153110048,128.3444976076555 722.2679425837321,88.70813397129189 813,83 C 903.7320574162679,77.29186602870811 1033.9234449760766,105.51196172248804 1145,114 C 1256.0765550239234,122.48803827751196 1348.0382775119617,111.24401913875599 1440,100 L 1440,400 L 0,400 Z");
-            }
-            25%{
-              d: path("M 0,400 L 0,100 C 107.49282296650719,109.8086124401914 214.98564593301438,119.61722488038279 299,130 C 383.0143540669856,140.3827751196172 443.5502392344498,151.33971291866027 535,140 C 626.4497607655502,128.66028708133973 748.8133971291866,95.02392344497608 844,74 C 939.1866028708134,52.976076555023916 1007.1961722488038,44.56459330143541 1102,51 C 1196.8038277511962,57.43540669856459 1318.401913875598,78.71770334928229 1440,100 L 1440,400 L 0,400 Z");
-            }
-            50%{
-              d: path("M 0,400 L 0,100 C 68.6602870813397,119.61722488038276 137.3205741626794,139.23444976076553 247,143 C 356.6794258373206,146.76555023923447 507.37799043062205,134.6794258373206 618,135 C 728.622009569378,135.3205741626794 799.1674641148326,148.04784688995215 877,147 C 954.8325358851674,145.95215311004785 1039.9521531100477,131.12918660287082 1135,121 C 1230.0478468899523,110.87081339712918 1335.0239234449762,105.43540669856459 1440,100 L 1440,400 L 0,400 Z");
-            }
-            75%{
-              d: path("M 0,400 L 0,100 C 94.34449760765548,106.4401913875598 188.68899521531097,112.88038277511961 286,121 C 383.31100478468903,129.1196172248804 483.5885167464115,138.91866028708134 583,138 C 682.4114832535885,137.08133971291866 780.956937799043,125.44497607655504 866,109 C 951.043062200957,92.55502392344496 1022.5837320574165,71.30143540669856 1116,69 C 1209.4162679425835,66.69856459330144 1324.7081339712918,83.34928229665073 1440,100 L 1440,400 L 0,400 Z");
-            }
-            100%{
-              d: path("M 0,400 L 0,100 C 65.85645933014354,80.33492822966508 131.71291866028707,60.66985645933015 235,72 C 338.2870813397129,83.33014354066985 479.0047846889952,125.65550239234449 575,127 C 670.9952153110048,128.3444976076555 722.2679425837321,88.70813397129189 813,83 C 903.7320574162679,77.29186602870811 1033.9234449760766,105.51196172248804 1145,114 C 1256.0765550239234,122.48803827751196 1348.0382775119617,111.24401913875599 1440,100 L 1440,400 L 0,400 Z");
-            }
-          }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,400 L 0,100 C 65.85645933014354,80.33492822966508 131.71291866028707,60.66985645933015 235,72 C 338.2870813397129,83.33014354066985 479.0047846889952,125.65550239234449 575,127 C 670.9952153110048,128.3444976076555 722.2679425837321,88.70813397129189 813,83 C 903.7320574162679,77.29186602870811 1033.9234449760766,105.51196172248804 1145,114 C 1256.0765550239234,122.48803827751196 1348.0382775119617,111.24401913875599 1440,100 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><style>
-          .path-1{
-            animation:pathAnim-1 4s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-          }
-          @keyframes pathAnim-1{
-            0%{
-              d: path("M 0,400 L 0,233 C 121.48325358851676,223.42105263157896 242.96650717703352,213.8421052631579 329,220 C 415.0334928229665,226.1578947368421 465.6172248803829,248.05263157894737 557,250 C 648.3827751196171,251.94736842105263 780.5645933014355,233.9473684210526 887,232 C 993.4354066985645,230.0526315789474 1074.1244019138755,244.1578947368421 1162,247 C 1249.8755980861245,249.8421052631579 1344.9377990430621,241.42105263157896 1440,233 L 1440,400 L 0,400 Z");
-            }
-            25%{
-              d: path("M 0,400 L 0,233 C 82.47846889952152,239.35406698564594 164.95693779904303,245.70813397129186 265,233 C 365.04306220095697,220.29186602870814 482.6507177033493,188.52153110047848 590,192 C 697.3492822966507,195.47846889952152 794.4401913875598,234.20574162679424 882,250 C 969.5598086124402,265.79425837320576 1047.5885167464114,258.6555023923445 1139,252 C 1230.4114832535886,245.3444976076555 1335.2057416267944,239.17224880382776 1440,233 L 1440,400 L 0,400 Z");
-            }
-            50%{
-              d: path("M 0,400 L 0,233 C 116.72727272727272,214.21531100478467 233.45454545454544,195.43062200956936 339,201 C 444.54545454545456,206.56937799043064 538.9090909090909,236.49282296650716 622,254 C 705.0909090909091,271.50717703349284 776.9090909090909,276.5980861244019 854,279 C 931.0909090909091,281.4019138755981 1013.4545454545455,281.11483253588517 1112,273 C 1210.5454545454545,264.88516746411483 1325.2727272727273,248.94258373205741 1440,233 L 1440,400 L 0,400 Z");
-            }
-            75%{
-              d: path("M 0,400 L 0,233 C 94.70813397129186,227.91866028708134 189.41626794258372,222.83732057416267 295,213 C 400.5837320574163,203.16267942583733 517.0430622009569,188.5693779904306 600,187 C 682.9569377990431,185.4306220095694 732.4114832535887,196.88516746411486 821,214 C 909.5885167464113,231.11483253588514 1037.311004784689,253.88995215311002 1147,258 C 1256.688995215311,262.11004784689 1348.3444976076555,247.555023923445 1440,233 L 1440,400 L 0,400 Z");
-            }
-            100%{
-              d: path("M 0,400 L 0,233 C 121.48325358851676,223.42105263157896 242.96650717703352,213.8421052631579 329,220 C 415.0334928229665,226.1578947368421 465.6172248803829,248.05263157894737 557,250 C 648.3827751196171,251.94736842105263 780.5645933014355,233.9473684210526 887,232 C 993.4354066985645,230.0526315789474 1074.1244019138755,244.1578947368421 1162,247 C 1249.8755980861245,249.8421052631579 1344.9377990430621,241.42105263157896 1440,233 L 1440,400 L 0,400 Z");
-            }
-          }</style><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="#F78DA7"></stop><stop offset="95%" stop-color="#8ED1FC"></stop></linearGradient></defs><path d="M 0,400 L 0,233 C 121.48325358851676,223.42105263157896 242.96650717703352,213.8421052631579 329,220 C 415.0334928229665,226.1578947368421 465.6172248803829,248.05263157894737 557,250 C 648.3827751196171,251.94736842105263 780.5645933014355,233.9473684210526 887,232 C 993.4354066985645,230.0526315789474 1074.1244019138755,244.1578947368421 1162,247 C 1249.8755980861245,249.8421052631579 1344.9377990430621,241.42105263157896 1440,233 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
-          </div>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out delay-150">
+                <style>
+                    .path-0 {
+                        animation: pathAnim-0 4s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    }
+
+                    @keyframes pathAnim-0 {
+                        0% {
+                            d: path("M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z");
+                        }
+
+                        25% {
+                            d: path("M 0,400 L 0,150 C 179.5,164.5 359,179 599,179 C 839,179 1139.5,164.5 1440,150 L 1440,400 L 0,400 Z");
+                        }
+
+                        50% {
+                            d: path("M 0,400 L 0,150 C 241,163 482,176 722,176 C 962,176 1201,163 1440,150 L 1440,400 L 0,400 Z");
+                        }
+
+                        75% {
+                            d: path("M 0,400 L 0,150 C 252,139.5 504,129 744,129 C 984,129 1212,139.5 1440,150 L 1440,400 L 0,400 Z");
+                        }
+
+                        100% {
+                            d: path("M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z");
+                        }
+                    }
+                </style>
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+                        <stop offset="5%" stop-color="#000"></stop>
+                        <stop offset="95%" stop-color="#8ED1FC"></stop>
+                    </linearGradient>
+                </defs>
+                <path d="M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z"
+                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            </svg>
+        </div>
         <!-- <div class="blur-xl" style="height: 100px; width: 100px; background-color: royalblue; position: absolute; border-radius: 50%;z-index: 1;"></div> -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative mb-10" style="margin-top: 120px;">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <div class="flex flex-row">
-                        <span class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
+                        <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
                                 class="h-14 w-30 rounded-full"></span>
                         <div><span class="text-3xl font-['Pacifico'] text-white mt-2">ryan</span></div>
                     </div>
@@ -704,7 +659,8 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop"
-        class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer">
+        class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer"
+        style="z-index: 99;">
         <i class="ri-arrow-up-line ri-lg"></i>
     </button>
     <!-- social icon -->
@@ -717,14 +673,6 @@
             class="fixed bottom-6 left-20 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
             <i class="ri-instagram-line"></i>
         </button>
-        <!-- <button
-        class="fixed bottom-6 left-40 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
-        <i class="ri-whatsapp-line"></i>
-    </button>
-    <button
-        class="fixed bottom-6 left-60 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
-        <i class="ri-whatsapp-line"></i>
-    </button> -->
     </div>
 
     <!-- Success Modal -->
@@ -747,146 +695,15 @@
             </div>
         </div>
     </div>
-
+    </div>
+    <script
+        type="text/javascript">!function () { if (!window.UnicornStudio) { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js", i.onload = function () { window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio.isInitialized = !0) }, (document.head || document.body).appendChild(i) } }();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
 
-
-    <script id="mobile-menu-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', function () {
-                if (mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.remove('hidden');
-                    mobileMenu.classList.add('flex');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                }
-            });
-        });
-    </script>
-
-
-    <script id="darkModeScript">
-        document.addEventListener('DOMContentLoaded', function () {
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const icon = darkModeToggle.querySelector('i');
-            const html = document.documentElement;
-
-            darkModeToggle.addEventListener('click', function () {
-                html.classList.toggle('dark-mode');
-
-                if (html.classList.contains('dark-mode')) {
-                    icon.classList.remove('ri-moon-line');
-                    icon.classList.add('ri-sun-line');
-                } else {
-                    icon.classList.remove('ri-sun-line');
-                    icon.classList.add('ri-moon-line');
-                }
-            });
-        });
-    </script>
-
-    <script id="scrollScript">
-        document.addEventListener('DOMContentLoaded', function () {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Back to top button
-            const backToTopButton = document.getElementById('backToTop');
-
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.remove('opacity-0', 'invisible');
-                    backToTopButton.classList.add('opacity-100', 'visible');
-                } else {
-                    backToTopButton.classList.remove('opacity-100', 'visible');
-                    backToTopButton.classList.add('opacity-0', 'invisible');
-                }
-            });
-
-            backToTopButton.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-    <script id="role-switcher-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const titles = ["Full Stack Developer", "Programmer", "Bodybuilder"];
-            const images = [
-                "https://readdy.ai/api/search-image?query=A%20confident%20Indian%20male%20software%20developer%20sitting%20in%20front%20of%20a%20laptop%20with%20code%20on%20screen%2C%20dark-themed%20modern%20workspace%2C%20wearing%20casual%20hoodie%2C%20cinematic%20lighting%2C%20realistic%20style%2C%20full%20HD&width=400&height=400&seq=1&orientation=squarish",
-                "https://readdy.ai/api/search-image?query=Young%20Indian%20male%20programmer%20surrounded%20by%20glowing%20code%20elements%20and%20digital%20screens%2C%20typing%20on%20keyboard%2C%20dark%20background%2C%20glowing%20tech%20UI%2C%20futuristic%20style%2C%20moody%20lighting&width=400&height=400&seq=5&orientation=squarish",
-                "https://readdy.ai/api/search-image?query=Fit%20Indian%20man%20bodybuilder%20posing%20in%20gym%2C%20muscular%20body%2C%20intense%20expression%2C%20professional%20gym%20lighting%2C%20sweat%20on%20skin%2C%20sharp%20shadows%2C%20ultra-realistic%2C%20full%20HD&width=400&height=400&seq=6&orientation=squarish"
-            ];
-
-            let index = 0;
-            const roleElement = document.getElementById('role');
-            const profileImage = document.getElementById('profile-image');
-
-            // Initial animation
-            gsap.to("#greeting", { opacity: 1, y: 0, duration: 0.8, delay: 0.2 });
-            gsap.to("#subheading", { opacity: 1, y: 0, duration: 0.8, delay: 0.4 });
-            gsap.to("#role", { opacity: 1, y: 0, duration: 0.8, delay: 0.6 });
-            gsap.to("#cta-button", { opacity: 1, y: 0, duration: 0.8, delay: 0.8 });
-            gsap.to("#image-container", { opacity: 1, scale: 1, duration: 0.8, delay: 1 });
-
-            // Role switcher
-            setInterval(() => {
-                index = (index + 1) % titles.length;
-
-                gsap.to(roleElement, {
-                    opacity: 0,
-                    y: -20,
-                    duration: 0.5,
-                    onComplete: () => {
-                        roleElement.textContent = titles[index];
-                        gsap.to(roleElement, {
-                            opacity: 1,
-                            y: 0,
-                            duration: 0.5
-                        });
-                    }
-                });
-
-                gsap.to(profileImage, {
-                    opacity: 0,
-                    scale: 0.95,
-                    duration: 0.5,
-                    onComplete: () => {
-                        profileImage.src = images[index];
-                        gsap.to(profileImage, {
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.5
-                        });
-                    }
-                });
-            }, 3000);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
