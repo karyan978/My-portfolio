@@ -38,7 +38,7 @@
                     <div class="flex items-center z-10">
                         <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
                                 class="w-50 h-14 rounded-full"></span>
-                        <span id="name" class="font-['Pacifico'] text-2xl text-white">ryan</span>
+                        <span id="name" class="font-['Pacifico'] text-2xl text-white absolute left-[74px]">ryan</span>
                     </div>
                     <div style="height: 50px; width: 150px; background-color: rgba(234, 255, 0, 0.342); position: absolute; z-index: 1;"
                         class="blur-xl"></div>
@@ -56,12 +56,19 @@
                         </button>
                     </div>
                     <!-- <div class="md:bg-gray w-30"> -->
-                    <div class="w-8 h-8 flex items-center justify-center md:hidden cursor-pointer"
+                    <div class="w-18 h-18 flex items-center md:hidden cursor-pointer"
                         id="mobile-menu-button">
-                        <i class="ri-menu-line ri-lg text-gray-700"></i>
+                        <i class="ri-menu-line ri-lg text-white-700"></i>
                     </div>
-
-                    <div id="mobile-menu" class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
+                        
+                     <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
+                        <button id="darkModeToggle"
+                            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
+                            <i class="ri-moon-line ri-lg"></i>
+                        </button>
+                    </div>
+                 
+                    <div id="mobile-menu" class="block md:hidden flex flex-col mt-5 pb-2 space-y-3">
                         <a href="#home"
                             class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Home</a>
                         <a href="#about"
@@ -73,20 +80,16 @@
                         <a href="#contact"
                             class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Contact</a>
                     </div>
-                    <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
-                        <button id="darkModeToggle"
-                            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
-                            <i class="ri-moon-line ri-lg"></i>
-                        </button>
-                    </div>
                     <!-- </div> -->
                 </div>
             </div>
         </nav>
         <!-- Hero Section -->
         <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black-900">
-            <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
+             <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
                 style="width:1440px; height: 900px"></div>
+                <!-- <div class="absolute top-0 left-0 w-full h-full" data-us-project="wL7a9enDC6pDEEUJVhwk" style="width:1440px; height: 900px"></div><script type="text/javascript">!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();</script> -->
+                 <!-- <div class="absolute top-0 left-0 w-full h-full" data-us-project="wL7a9enDC6pDEEUJVhwk" style="width:1440px; height: 950px"></div><script type="text/javascript">!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();</script> -->
             <div class="floating-icons">
                 <i class="ri-html5-line ri-3x" style="top: 10%; left: 10%;"></i>
                 <i class="ri-css3-line ri-3x" style="top: 20%; left: 30%;"></i>
@@ -115,7 +118,7 @@
                         </div>
                         <p class="text-white mb-6">Crafting seamless web experiences from front to back.</p>
                         <div class="flex space-x-4">
-                            <a href="#"
+                            <a href="#resume"
                                 class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
                                 Resume</a>
                             <div class="h-20 w-20 rounded-full absolute top-4/3 bg-opacity-50 blur-sm z-1 bg-red-200">
@@ -144,7 +147,7 @@
             <div class="blur-xl"
                 style="height: 200px; width: 200px; background-color: rgba(217, 255, 0, 0.164); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
             </div>
-            <div class="blur-xl"
+            <div class="blur-xl"`
                 style="height: 200px; width: 200px; background-color: rgba(207, 134, 8, 0.164); border-radius: 50%; position: absolute; top: 5%; right: 3%; z-index: 1;">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,13 +174,13 @@
 
                             </p>
                             <div class="flex space-x-4 mt-8">
-                                <a href="#"
+                                <a href="#resume"
                                     class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all cursor-pointer">Download
                                     Resume</a>
                             </div>
                         </div>
 
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4 mt-5">Education & Experience</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4 mt-5">Education</h3>
                         <div class="mb-6">
                             <div class="flex items-center mb-2">
                                 <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
@@ -433,7 +436,7 @@
                     </div> -->
     <!-- </div>
     </div> -->
-
+  <section id="resume">
     <div class="h-screen0 pt-5 relative z-10" id="resume">
         <div class="w-[50%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto perspective-500">
             <div id="resume-container">
@@ -463,6 +466,8 @@
         <div class="h-screen0 w-[100%] bg-[#034C53] fixed overlay absolute top-0 bottom-0 opacity-0" style="z-index: 20;"></div>
 
     </div>
+
+    </section>
 
 
 
@@ -523,11 +528,11 @@
                     <div class="mt-8">
                         <h3 id="contact-animation" class="text-xl font-semibold text-gray-800 mb-4">Connect With Me</h3>
                         <div class="flex space-x-4">
-                            <a href="#"
+                            <a href="https://www.linkedin.com/in/aryan-kumar-9b8883358/"
                                 class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
                                 <i class="ri-linkedin-line ri-lg"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://github.com/karyan978"
                                 class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
                                 <i class="ri-github-line ri-lg"></i>
                             </a>
@@ -623,10 +628,12 @@
                         <stop offset="95%" stop-color="#8ED1FC"></stop>
                     </linearGradient>
                 </defs>
+                
                 <path d="M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z"
                     stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
                     class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
             </svg>
+
         </div>
         <!-- <div class="blur-xl" style="height: 100px; width: 100px; background-color: royalblue; position: absolute; border-radius: 50%;z-index: 1;"></div> -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative mb-10" style="margin-top: 120px;">
@@ -635,7 +642,7 @@
                     <div class="flex flex-row">
                         <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
                                 class="h-14 w-30 rounded-full"></span>
-                        <div><span class="text-3xl font-['Pacifico'] text-white mt-2">ryan</span></div>
+                        <div><span class="text-3xl font-['Pacifico'] text-white mt-2 absolute left-[74px]">ryan</span></div>
                     </div>
                     <p class="text-yellow-400 mt-2">© 2025 Aryan Kumar. All rights reserved.</p>
                 </div>
@@ -696,6 +703,9 @@
         </div>
     </div>
     </div>
+        <script src="https://cdn.jsdelivr.net/gh/phucbm/cursorjs@latest/dist/cursorjs.min.js"></script>
+
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script
         type="text/javascript">!function () { if (!window.UnicornStudio) { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js", i.onload = function () { window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio.isInitialized = !0) }, (document.head || document.body).appendChild(i) } }();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -704,6 +714,18 @@
 
 
     <script src="script.js"></script>
+    <script>
+    Cursorjs.create({
+    innerHTML: '<img src="asset/logoA.png" width="20" height="20">',
+    cursorCSS: {
+      background: 'transparent',
+      backdropFilter: 'blur(40px)',
+      border: 'none',
+      width: '20px',
+      height: '20px',
+    }
+  });
+</script>
 </body>
 
 </html>

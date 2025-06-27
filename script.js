@@ -47,14 +47,14 @@ tl.from("#name",{
     y: -30,
     opacity: 0,
     duration: 0.5,
-    delay: 1,
+    delay: 0.1,
 
 })
 tl.from("#desktop-menu a",{
     y: -30,
     opacity: 0,
     duration: 1,
-    delay: 0.5,
+    delay: 0.1,
     stagger: 0.3,
 })
 tl.from("#desktop-menu button",{
@@ -81,6 +81,19 @@ var tl2 = gsap.timeline({scrollTrigger:{
     background: "red",
     // markers: true,
 }})
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("nav", {
+  backgroundColor: "#333446", // ya jo bhi color chahiye
+  duration: 0.3,
+  scrollTrigger: {
+    trigger: "body",
+    start: "90vh top", // jahan se change start ho
+    toggleActions: "play reverse play reverse",
+    markers: false
+  }
+});
+
 tl2.from("#about-content p",{
     x: 30,
     opacity: 0,
@@ -139,9 +152,11 @@ var tl5 = gsap.timeline({scrollTrigger:{
 
 tl5.to("#img2",{
     rotateX: "0deg",
+    duration: 5,
 })
 .to("#img3",{
     rotateX: "0deg",
+     duration: 20,
 })
 .to("#resume-container",{
     scale:"0.5",

@@ -8,6 +8,9 @@
               font-family: 'PT Serif', sans-serif;
               overflow-x: hidden;
              scroll-behavior: smooth;
+             scrollbar-width: none;
+             -ms-overflow-style: none; 
+            cursor: none;
         }
         .gradient-bg {
             background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
