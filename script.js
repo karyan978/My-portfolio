@@ -298,6 +298,21 @@ tl6.from("#contact-form",{
             }, 3000);
         });
 
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButton = document.getElementById('download-resume');
+            
+            downloadButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Create a dummy PDF file and trigger download
+                const link = document.createElement('a');
+                link.href = '#'; // In a real scenario, this would be the path to the resume PDF
+                link.download = 'asset/Aryan-resume.jpg';
+                link.click();
+            });
+        });
+
  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     ScrollSmoother.create({
@@ -308,6 +323,6 @@ tl6.from("#contact-form",{
     });
 
      function openResume() {
-      window.open('asset/1.png', '_blank');
+      window.open('asset/Aryan-resume.jpg', '_blank');
     }
     

@@ -31,10 +31,47 @@
     <link rel="stylesheet" href="/asset/style.css">
 </head>
 
-<body>
+<body class="dark:color-white">
     <div id="main">
+        <nav class="fixed w-full top-0 z-50 bg-gray/90 text-white backdrop-blur-sm shadow-sm z-999 "style="z-index:999;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-['Pacifico'] text-primary"><img src="asset/logoA.png" class="w-42 h-12" alt=""></a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link active-nav text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Home</a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">About</a>
+                    <a href="#skills" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Projects</a>
+                    <a href="#resume" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Resume</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Contact</a>
+                     <button id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="ri-moon-line ri-lg"></i></button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center cursor-pointer">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">About</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Projects</a>
+                <a href="#resume" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Resume</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Contact</a>
+                 <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button"><i class="ri-moon-line ri-lg"></i></button>
+            </div>
+        </div>
+    </nav>
+
         <!-- Navigation Bar -->
-        <nav class="bg[#000] shadow-md bg-blur-sm border-b border-white fixed top-0 w-full z-50 text-white"
+        <!-- <nav class="bg[#000] shadow-md bg-blur-sm border-b border-white fixed top-0 w-full z-50 text-white"
             style="z-index:999;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="flex justify-between h-16">
@@ -55,11 +92,10 @@
                             class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
                         <button id="darkModeToggle"
                             class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
-                            <i class="ri-moon-line ri-lg"></i>
                         </button>
-                    </div>
+                    </div>-->
                     <!-- <div class="md:bg-gray w-30"> -->
-                    <div class="w-18 h-18 flex items-center md:hidden cursor-pointer" id="mobile-menu-button">
+                    <!--<div class="w-18 h-18 flex items-center md:hidden cursor-pointer" id="mobile-menu-button">
                         <i class="ri-menu-line ri-lg text-white-700"></i>
                     </div>
 
@@ -81,15 +117,15 @@
                             class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">projects</a>
                         <a href="#contact"
                             class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Contact</a>
-                    </div>
-                    <!-- </div> -->
+                    </div>-->
+                    <!-- </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!-- Hero Section -->
         <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black-900 border-b border-white">
             <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
-                style="width:auto; height: auto"></div>
+                style="width: 100%; height: 100vh"></div>
             <div class="floating-icons">
                 <i class="ri-html5-line ri-3x" style="top: 10%; left: 10%;"></i>
                 <i class="ri-css3-line ri-3x" style="top: 20%; left: 30%;"></i>
@@ -418,7 +454,9 @@
     <section id="projects" class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="
+            grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
+             flex flex-row overflow-hidden">
                 <!-- Project 1 -->
                 <div
                     class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover1">
@@ -515,8 +553,68 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 4 -->
                 <div
+                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
+                    <div class="h-48 overflow-hidden">
+                        <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">PizzaPan</h3>
+                        <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#"
+                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div
+                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
+                    <div class="h-48 overflow-hidden">
+                        <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">PizzaPan</h3>
+                        <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="net-flix-website.vercel.app"
+                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div
                     class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
@@ -574,11 +672,11 @@
                     </div>
                     <div id="img2" class="img transform transition duration-500"
                         style=" transform-origin: top; transform: rotateX(-90deg);">
-                        <img src="asset/resume2.png" alt="">
+                        <img src="asset/resume1.jpg" alt="">
                     </div>
                     <div id="img3" class="img pb-5 transform transition duration-500"
                         style=" transform-origin: top; transform: rotateX(-90deg);">
-                        <img src="asset/resume1.png" alt="">
+                        <img src="asset/resume2.jpg" alt="">
                     </div>
                 </div>
                 <div class="text text-center font-bold text-4xl font-bold text-black mb-2 absolute" id="text"
@@ -586,9 +684,9 @@
                     <h1 class="h1" style="z-index: 99;">create by<br> Aryan kumar</h1>
 
                     <div class="">
-                        <a href="#"
+                        <a href="asset/Aryan-resume.jpg" id="download-resume" 
                             class="bg-primary text-white px-2  py-2 rounded-button font-medium text-xl hover:bg-primary/90 z-10 transition-all cursor-pointer"><button
-                                onclick="openResume()">Download
+                                onclick="openResume()"><i class="ri-download-line mr-2"></i>Download
                                 Resume</button></a>
                     </div>
                 </div>
@@ -779,20 +877,25 @@
                     </div>
                     <p class="text-yellow-400 mt-2">© 2025 Aryan Kumar. All rights reserved.</p>
                 </div>
+
                 <div class="flex space-x-4">
-                    <a href="#" class="text-blue-400 hover:text-white transition-colors cursor-pointer">
-                        <i class="ri-linkedin-line ri-lg"></i>
-                    </a>
-                    <a href="#" class="text-orange-400 hover:text-white transition-colors cursor-pointer">
-                        <i class="ri-github-line ri-lg"></i>
-                    </a>
-                    <a href="#" class="text-blue-400 hover:text-white transition-colors cursor-pointer">
-                        <i class="ri-twitter-line ri-lg"></i>
-                    </a>
-                    <a href="#" class="text-pink-400 hover:text-white transition-colors cursor-pointer">
-                        <i class="ri-instagram-line ri-lg"></i>
-                    </a>
-                </div>
+                            <a href="https://www.linkedin.com/in/aryan-kumar-9b8883358/"
+                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                <i class="ri-linkedin-line ri-lg"></i>
+                            </a>
+                            <a href="https://github.com/karyan978"
+                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                <i class="ri-github-line ri-lg"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                <i class="ri-twitter-line ri-lg"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                <i class="ri-instagram-line ri-lg"></i>
+                            </a>
+                        </div>
             </div>
         </div>
     </footer>
@@ -802,18 +905,7 @@
         class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer"
         style="z-index: 99;">
         <i class="ri-arrow-up-line ri-lg"></i>
-    </button>
-    <!-- social icon -->
-    <div class="flex-row">
-        <button
-            class="fixed bottom-6 left-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
-            <i class="ri-whatsapp-line"></i>
-        </button>
-        <button
-            class="fixed bottom-6 left-20 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer">
-            <i class="ri-instagram-line"></i>
-        </button>
-    </div>
+    </button> 
 
     <!-- Success Modal -->
     <div id="successModal"
