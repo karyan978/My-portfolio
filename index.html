@@ -3,23 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="asset/logoA.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryan Kumar - Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            cormorant: ['"Cormorant Garamond"', 'serif'],
-          }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cormorant: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
-     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    </script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>tailwind.config = { theme: { extend: { colors: { primary: '#4F46E5', secondary: '#10B981' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,10 +31,11 @@
     <link rel="stylesheet" href="/asset/style.css">
 </head>
 
-<body class="bg-gray-50">
+<body>
     <div id="main">
         <!-- Navigation Bar -->
-        <nav class="bg[#0E2148] shadow-md bg-blur-sm fixed top-0 w-full z-50 text-white" style="z-index:999;">
+        <nav class="bg[#000] shadow-md bg-blur-sm border-b border-white fixed top-0 w-full z-50 text-white"
+            style="z-index:999;">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center z-10">
@@ -56,18 +59,17 @@
                         </button>
                     </div>
                     <!-- <div class="md:bg-gray w-30"> -->
-                    <div class="w-18 h-18 flex items-center md:hidden cursor-pointer"
-                        id="mobile-menu-button">
+                    <div class="w-18 h-18 flex items-center md:hidden cursor-pointer" id="mobile-menu-button">
                         <i class="ri-menu-line ri-lg text-white-700"></i>
                     </div>
-                        
-                     <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
+
+                    <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
                         <button id="darkModeToggle"
                             class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
                             <i class="ri-moon-line ri-lg"></i>
                         </button>
                     </div>
-                 
+
                     <div id="mobile-menu" class="block md:hidden flex flex-col mt-5 pb-2 space-y-3">
                         <a href="#home"
                             class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Home</a>
@@ -85,11 +87,9 @@
             </div>
         </nav>
         <!-- Hero Section -->
-        <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black-900">
-             <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
+        <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black-900 border-b border-white">
+            <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
                 style="width:1440px; height: 900px"></div>
-                <!-- <div class="absolute top-0 left-0 w-full h-full" data-us-project="wL7a9enDC6pDEEUJVhwk" style="width:1440px; height: 900px"></div><script type="text/javascript">!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();</script> -->
-                 <!-- <div class="absolute top-0 left-0 w-full h-full" data-us-project="wL7a9enDC6pDEEUJVhwk" style="width:1440px; height: 950px"></div><script type="text/javascript">!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();</script> -->
             <div class="floating-icons">
                 <i class="ri-html5-line ri-3x" style="top: 10%; left: 10%;"></i>
                 <i class="ri-css3-line ri-3x" style="top: 20%; left: 30%;"></i>
@@ -111,7 +111,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-10 md:mb-0 text-white" style="z-index: 99;">
-                        <h1 class="text-4xl font-bold font-cormorant text-white mb-2">Hi, I'm <span class="text-primary font-cormorant">Aryan
+                        <h1 class="text-4xl font-bold font-cormorant text-white mb-2">Hi, I'm <span
+                                class="text-primary font-cormorant">Aryan
                                 Kumar</span></h1>
                         <div id="role-switcher">
                             <h2 id="role" class="text-2xl font-semibold z-10 text-white mb-4">Full Stack Developer</h2>
@@ -129,10 +130,11 @@
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0"
-                            id="image-container">
-                            <img id="profile-image" src="asset/Aryan-Kumar.png" alt="Aryan Kumar"
-                                class="w-full h-full object-cover">
+                        <div class="relative" id="image-container">
+                            <model-viewer id="computer-setup" src="asset/gaming_desktop_pc_blend_file.glb" autoplay
+                                auto-rotate camera-controls disable-zoom min-camera-orbit="auto 90deg auto"
+                                max-camera-orbit="auto 90deg auto" shadow-intensity="0"
+                                interaction-policy="allow-when-focused"></model-viewer>
                         </div>
                     </div>
                 </div>
@@ -140,35 +142,40 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-16 bg-white relative">
+        <section id="about" class="py-16 relative">
             <div class="blur-xl"
                 style="height: 300px; width: 300px; background-color: rgba(0, 162, 255, 0.1); border-radius: 50%; position: absolute; top: 20%; left: 4%; z-index: 1;">
             </div>
             <div class="blur-xl"
                 style="height: 200px; width: 200px; background-color: rgba(217, 255, 0, 0.164); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
             </div>
-            <div class="blur-xl"`
+            <div class="blur-xl" `
                 style="height: 200px; width: 200px; background-color: rgba(207, 134, 8, 0.164); border-radius: 50%; position: absolute; top: 5%; right: 3%; z-index: 1;">
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div id="profile-image" class="shadow-lg"
-                        style="height: 90%; width: 54%; border-radius: 50%; overflow: hidden; margin-left: 100px; border: 2px solid blue;">
-
-                        <img class="rounded-full" src="asset/Aryan-Kumar.png" alt="">
+                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0"
+                        id="image-container">
+                        <img id="profile-image" src="asset/Aryan-Kumar.png" alt="Aryan Kumar"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="h-90 w-90 rounded-full absolute left-60 top-10 bg-opacity-10 blur bg-black-200"></div>
 
-                    <div id="about-content">
+                    <div id="about-content" class="h-[400px] overflow-hidden">
                         <div>
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">Who I Am</h3>
-                            <p class="text-gray-600 mb-6">Hi, I’m Aryan Kumar, a full-stack developer with a passion for
+                            <p class="text-gray-600 mb-6">Hi, I’m <span class="text-primary text-bold text-xl">Aryan
+                                    Kumar</span>, a full-stack developer with a passion for
                                 interactive web design.
-                                I built this Pani Patasha website using HTML, CSS, GSAP, Three.js, and PHP to create a
+                                I built this Pani Patasha website using <span
+                                    class="text-primary text-bold text-xl">HTML, CSS, GSAP, Three.js,</span> and PHP to
+                                create a
                                 vibrant, animated experience.
-                                My aim was to bring the flavor of Indian street food into a modern, tech-powered space.
-                                With smooth animations and 3D visuals, I’ve made sure it’s both tasty and techy – just
+                                My aim was to bring the flavor of Indian street food into a modern,<span
+                                    class="text-primary text-bold text-xl"> tech-powered space.
+                                    With smooth animations and 3D visuals,</span> I’ve made sure it’s both tasty and
+                                techy – just
                                 like
                                 the real thing!
 
@@ -194,142 +201,227 @@
                                     <h4 class="font-medium text-gray-800">BCA in Computer Science</h4>
                                     <p class="text-sm text-gray-600">Nalanda College, Bhihar-Sharif, 2024-2027</p>
                                 </div>
+
                             </div>
+                            <div class="flex items-center mb-2">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3">
+                                    <i class="ri-graduation-cap-line ri-lg text-primary"></i>
+                                </div>
+                                <div
+                                    class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200">
+                                </div>
+
+                                <div>
+                                    <h4 class="font-medium text-gray-800">BCA in Computer Science</h4>
+                                    <p class="text-sm text-gray-600">Nalanda College, Bhihar-Sharif, 2024-2027</p>
+                                </div>
+
+                            </div>
+
+                            <!-- Column 1 -->
+                            <div>
+                                <div class="mb-4">
+                                    <div class="flex justify-between mb-1">
+                                        <span>HTML</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="bg-green-500 h-3 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="flex justify-between mb-1">
+                                        <span>CSS</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="bg-blue-500 h-3 rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="flex justify-between mb-1">
+                                        <span>JavaScript</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="bg-yellow-400 h-3 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div>
+                                <div class="mb-4">
+                                    <div class="flex justify-between mb-1">
+                                        <span>React</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="bg-cyan-400 h-3 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="flex justify-between mb-1">
+                                        <span>php</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="bg-lime-500 h-3 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="flex justify-between mb-1">
+                                        <span>Laravel</span>
+                                        <span>70%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="bg-emerald-400 h-3 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <div class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200"></div>
-
-        <section id="skills" class="relative py-16 bg-gray-50">
-            <div class="blur-xl"
-                style="height: 200px; width: 200px; background-color: rgba(255, 0, 8, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
-            </div>
-            <div class="blur-xl"
-                style="height: 200px; width: 200px; background-color: rgba(13, 0, 255, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
-            </div>
-            <div class="blur-xl"
-                style="height: 200px; width: 200px; background-color: rgba(220, 235, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
-            </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
-
-                <!-- frontend skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <i class="ri-layout-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Frontend</h3>
-                    <hr class="mb-4">
-                    <div class="flex flex-wrap flex-row gap-10">
-                        <div class="w-20 h-20 flex items-center justify-center bg-red-400 rounded-full mb-4">
-                            <i class="ri-html5-line text-5xl text-white"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-blue-400 rounded-full mb-4">
-                            <i class="ri-css3-line text-5xl text-white"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-gray-600 rounded-full mb-4">
-                            <i class="ri-javascript-line text-5xl text-yellow-400"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                            <i class="ri-reactjs-line text-5xl text-sky-400"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                            <i class="ri-tailwind-css-fill text-5xl text-sky-400"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-md mb-4">
-                            <i class="ri-bootstrap-line text-5xl text-white"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-black rounded-full mb-4">
-                            <img src="asset/gsap.svg" alt="" class="w-12 h-12 ">
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-gray-300 rounded-full mb-4">
-                            <img src="asset/three-js-icon.svg" alt="" class="w-12 h-12 ">
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                    <!-- backend skills -->
-
-                    <div class="bg-white p-6 rounded-lg shadow-md mt-5 skill-card">
-                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                            <i class="ri-server-line ri-lg text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend</h3>
-                        <hr class="mb-4">
-                        <div class="flex flex-wrap flex-row gap-10">
-                            <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-full mb-4">
-                                <i class="ri-php-line text-5xl text-white"></i>
-                            </div>
-                            <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-lg mb-4">
-                                <i class="ri-nodejs-line text-5xl text-green-500"></i>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <!-- database -->
-
-                    <div class="bg-white p-6 rounded-lg shadow-md mt-5 skill-card">
-                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                            <i class="ri-database-2-line ri-lg text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Database</h3>
-                        <hr class="mb-4">
-                        <div class="flex flex-wrap flex-row gap-10">
-                            <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-full mb-4">
-                                <img src="asset/mysql.png" alt="" class="w-12 h-12 ">
-                            </div>
-                            <div class="w-20 h-20 flex items-center justify-center bg-blue-200 rounded-full mb-4">
-                                <img src="asset/mongodb.png" alt="" class="w-12 h-12 ">
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <!-- tools -->
-
-                    <div class="bg-white p-6 rounded-lg shadow-md mt-5 skill-card">
-                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                            <i class="ri-tools-line ri-lg text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools</h3>
-                        <hr class="mb-4">
-                        <div class="flex flex-wrap flex-row gap-10">
-                            <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
-                                <i class="ri-github-line text-5xl text-white"></i>
-                            </div>
-                            <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
-                                <img src="asset/vsCode.png" alt="" class="w-12 h-12 ">
-                            </div>
-                            <div class="w-20 h-20 flex items-center justify-center bg-yellow-300 rounded-full mb-4">
-                                <img src="asset/docker.png" alt="" class="w-12 h-12 ">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
     </div>
     </section>
 
+    <!-- Skills Section -->
+    <div class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200"></div>
+
+    <section id="skills" class="relative py-16">
+        <div class="blur-xl"
+            style="height: 200px; width: 200px; background-color: rgba(255, 0, 8, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
+        </div>
+        <div class="blur-xl"
+            style="height: 200px; width: 200px; background-color: rgba(13, 0, 255, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
+        </div>
+        <div class="blur-xl"
+            style="height: 200px; width: 200px; background-color: rgba(220, 235, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
+
+            <!-- frontend skills -->
+            <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md skill-card">
+                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                    <i class="ri-layout-line ri-lg text-primary"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Frontend</h3>
+                <hr class="mb-4">
+                <div class="flex flex-wrap flex-row gap-10">
+                    <div class="w-20 h-20 flex items-center justify-center bg-red-400 rounded-full mb-4">
+                       <a href="https://www.w3schools.com/howto/howto_make_a_website.asp"><i class="ri-html5-line text-5xl text-white"></i></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-blue-400 rounded-full mb-4">
+                        <a href="https://www.w3schools.com/css/"><i class="ri-css3-line text-5xl text-white"></i></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-gray-600 rounded-full mb-4">
+                        <a href="https://www.w3schools.com/js/"><i class="ri-javascript-line text-5xl text-yellow-400"></i></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <a href="https://react.dev/learn/tutorial-tic-tac-toe"><i class="ri-reactjs-line text-5xl text-sky-400"></i></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <a href="https://tailwindcss.com/"><i class="ri-tailwind-css-fill text-5xl text-sky-400"></i></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-md mb-4">
+                        <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"><i class="ri-bootstrap-line text-5xl text-white"></i></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-black rounded-full mb-4">
+                        <a href="https://gsap.com/"><img src="asset/gsap.svg" alt="" class="w-12 h-12 "></a>
+                    </div>
+                    <div class="w-20 h-20 flex items-center justify-center bg-gray-300 rounded-full mb-4">
+                        <a href="https://threejs.org/"><img src="asset/three-js-icon.svg" alt="" class="w-12 h-12 "></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- backend skills -->
+
+                <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md mt-5 skill-card">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-server-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend</h3>
+                    <hr class="mb-4">
+                    <div class="flex flex-wrap flex-row gap-10">
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-full mb-4">
+                            <a href="https://www.php.net/"><i class="ri-php-line text-5xl text-white"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-lg mb-4">
+                            <a href="https://nodejs.org/en"><i class="ri-nodejs-line text-5xl text-green-500"></i></a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- database -->
+
+                <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md mt-5 skill-card">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <a href="https://www.mysql.com/"><i class="ri-database-2-line ri-lg text-primary"></i></a>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Database</h3>
+                    <hr class="mb-4">
+                    <div class="flex flex-wrap flex-row gap-10">
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-full mb-4">
+                            <img src="asset/mysql.png" alt="" class="w-12 h-12 ">
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-200 rounded-full mb-4">
+                            <a href="https://www.mongodb.com/"><img src="asset/mongodb.png" alt="" class="w-12 h-12 "></a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- tools -->
+
+                <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md mt-5 skill-card">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-tools-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools</h3>
+                    <hr class="mb-4">
+                    <div class="flex flex-wrap flex-row gap-10">
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
+                            <i class="ri-github-line text-5xl text-white"></i>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
+                            <img src="asset/vsCode.png" alt="" class="w-12 h-12 ">
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-yellow-300 rounded-full mb-4">
+                            <img src="asset/docker.png" alt="" class="w-12 h-12 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
+    <section id="projects" class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover1">
+                <div
+                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover1">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project1.png" alt="Pani-Patasha" class="w-full h-full object-cover">
                     </div>
@@ -358,8 +450,44 @@
                     </div>
                 </div>
 
+
                 <!-- Project 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover2">
+
+
+                <div
+                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover1">
+                    <div class="h-48 overflow-hidden">
+                        <img src="asset/image.png" alt="Pani-Patasha" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Webhouse india</h3>
+                        <p class="text-gray-600 mb-4">A burst of flavor in every bite – Pani Patasha, pure delight!</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Html</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">css</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">js</span>  
+                                <span
+                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>  
+                                                 </div>
+                        <div class="flex space-x-3">
+                            <a href="http://web-house-indol.vercel.app"
+                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project3 -->
+                <div
+                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover2">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project2.png" alt="e-shop" class="w-full h-full object-cover">
                     </div>
@@ -388,7 +516,8 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover3">
+                <div
+                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
                     <div class="h-48 overflow-hidden">
                         <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
                     </div>
@@ -421,7 +550,7 @@
     </section>
 
     <!-- resume -->
-      <!-- <div class="h-50 w-50 felx justify-center bg-black">
+    <!-- <div class="h-50 w-50 felx justify-center bg-black">
      <div class="text-center text-black d-flex justify-center pb-5">
              <div class="h-60 w-50 bg-transparent backdrop-blur-sm border-radius-lg border-white border-2">
                 <span>My resume</span>
@@ -436,43 +565,45 @@
                     </div> -->
     <!-- </div>
     </div> -->
-  <section id="resume">
-    <div class="h-screen0 pt-5 relative z-10" id="resume">
-        <div class="w-[50%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto perspective-500">
-            <div id="resume-container">
-                <div id="img1" class="img transform transition duration-500 mt-20 " style=" transform-origin: top;">
-                    <img src="asset/1.png" alt="">
-                </div>
-                <div id="img2" class="img transform transition duration-500"
-                    style=" transform-origin: top; transform: rotateX(-90deg);">
-                    <img src="asset/resume2.png" alt="">
-                </div>
-                <div id="img3" class="img pb-5 transform transition duration-500"
-                    style=" transform-origin: top; transform: rotateX(-90deg);">
-                    <img src="asset/resume1.png" alt="">
-                </div>
-            </div>
-            <div class="text text-center font-bold text-4xl font-bold text-black mb-2 absolute"
-                id="text" style="z-index: 99;">
-                <h1 class="h1" style="z-index: 99;">create by<br> Aryan kumar</h1>
-
-                 <div class="">
-                <a href="#"
-                    class="bg-primary text-white px-2  py-2 rounded-button font-medium text-xl hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
-                    Resume</a>
+    <section id="resume">
+        <div class="h-screen0 pt-5 relative z-10" id="resume">
+            <div class="w-[50%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto perspective-500">
+                <div id="resume-container">
+                    <div id="img1" class="img transform transition duration-500 mt-20 " style=" transform-origin: top;">
+                        <img src="asset/1.png" alt="">
                     </div>
-            </div>
-        </div>
-        <div class="h-screen0 w-[100%] bg-[#034C53] fixed overlay absolute top-0 bottom-0 opacity-0" style="z-index: 20;"></div>
+                    <div id="img2" class="img transform transition duration-500"
+                        style=" transform-origin: top; transform: rotateX(-90deg);">
+                        <img src="asset/resume2.png" alt="">
+                    </div>
+                    <div id="img3" class="img pb-5 transform transition duration-500"
+                        style=" transform-origin: top; transform: rotateX(-90deg);">
+                        <img src="asset/resume1.png" alt="">
+                    </div>
+                </div>
+                <div class="text text-center font-bold text-4xl font-bold text-black mb-2 absolute" id="text"
+                    style="z-index: 99;">
+                    <h1 class="h1" style="z-index: 99;">create by<br> Aryan kumar</h1>
 
-    </div>
+                    <div class="">
+                        <a href="#"
+                            class="bg-primary text-white px-2  py-2 rounded-button font-medium text-xl hover:bg-primary/90 z-10 transition-all cursor-pointer"><button
+                                onclick="openResume()">Download
+                                Resume</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="h-screen0 w-[100%] bg-[#034C53] fixed overlay absolute top-0 bottom-0 opacity-0"
+                style="z-index: 20;"></div>
+
+        </div>
 
     </section>
 
 
 
     <!-- Contact Section -->
-    <section id="contact" class="relative py-16 bg-gray-50">
+    <section id="contact" class="relative py-16">
         <div class="blur-xl"
             style="height: 200px; width: 200px; background-color: rgba(0, 162, 255, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
         </div>
@@ -548,7 +679,8 @@
                     </div>
                 </div>
                 <div>
-                    <div class="bg-white p-6 rounded-lg shadow-md" style="z-index: 99;" id="contact-form">
+                    <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md"
+                        style="z-index: 99;" id="contact-form">
                         <h3 class="text-xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
                         <form id="contactForm">
                             <div class="mb-4">
@@ -628,7 +760,7 @@
                         <stop offset="95%" stop-color="#8ED1FC"></stop>
                     </linearGradient>
                 </defs>
-                
+
                 <path d="M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z"
                     stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
                     class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
@@ -642,7 +774,8 @@
                     <div class="flex flex-row">
                         <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
                                 class="h-14 w-30 rounded-full"></span>
-                        <div><span class="text-3xl font-['Pacifico'] text-white mt-2 absolute left-[74px]">ryan</span></div>
+                        <div><span class="text-3xl font-['Pacifico'] text-white mt-2 absolute left-[74px]">ryan</span>
+                        </div>
                     </div>
                     <p class="text-yellow-400 mt-2">© 2025 Aryan Kumar. All rights reserved.</p>
                 </div>
@@ -703,7 +836,10 @@
         </div>
     </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/gh/phucbm/cursorjs@latest/dist/cursorjs.min.js"></script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/phucbm/cursorjs@latest/dist/cursorjs.min.js"></script>
 
     <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
     <script
@@ -715,17 +851,17 @@
 
     <script src="script.js"></script>
     <script>
-    Cursorjs.create({
-    innerHTML: '<img src="asset/logoA.png" width="20" height="20">',
-    cursorCSS: {
-      background: 'transparent',
-      backdropFilter: 'blur(40px)',
-      border: 'none',
-      width: '20px',
-      height: '20px',
-    }
-  });
-</script>
+        Cursorjs.create({
+            innerHTML: '<img src="asset/logoA.png" width="20" height="20">',
+            cursorCSS: {
+                background: 'transparent',
+                backdropFilter: 'blur(40px)',
+                border: 'none',
+                width: '20px',
+                height: '20px',
+            }
+        });
+    </script>
 </body>
 
 </html>

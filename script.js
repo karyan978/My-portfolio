@@ -306,3 +306,8 @@ tl6.from("#contact-form",{
       smooth: 1.5,  // scroll speed
       effects: true
     });
+
+     function openResume() {
+      window.open('asset/1.png', '_blank');
+    }
+    

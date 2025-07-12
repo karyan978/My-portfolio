@@ -75,3 +75,17 @@
             background-color: #1f2937;
             color: #f3f4f6;
         }
+        .image-container{
+            position: relative;
+            width: 500px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+    
+        #computer-setup{
+           width: 500px;
+           height: 300px;
+           scale: 1.8;
+        }
