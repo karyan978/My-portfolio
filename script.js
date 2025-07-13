@@ -173,7 +173,7 @@ tl5.to("#img2",{
   scale: 1.2,
   ease: "power2.out",
   duration: 1.5,
-  marginLeft: "30vh"
+//   marginLeft: "30vh"
 },'a')
 .to(".overlay",{
     opacity: 0.5,
