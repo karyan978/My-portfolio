@@ -169,7 +169,7 @@ tl5.to("#img2",{
   duration: 1.5,
 },'a')
 .to("#text",{
-   marginTop: "-110vh",
+   marginTop: "-90vh",
   scale: 1.2,
   ease: "power2.out",
   duration: 1.5,
