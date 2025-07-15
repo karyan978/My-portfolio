@@ -126,59 +126,38 @@ tl3.from(".skill-card i, .skill-card img", {
 })
 var tl4 = gsap.timeline({scrollTrigger:{
   trigger: "#projects",
-    start: "0% 30%",
-    end: "100% 100%",
+    start: "-10% 0%",
+    end: "50% 70%",
     scrub: true,
     // markers: true,
 }})
 tl4.from(".card-hover1",{
-    x: 30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 tl4.from(".card-hover2",{
-    x: 30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 tl4.from(".card-hover3",{
-    x: -30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 tl4.from(".card-hover4",{
-    x: 30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 tl4.from(".card-hover5",{
-    x: -30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 tl4.from(".card-hover6",{
-    x: 30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 tl4.from(".card-hover7",{
-    x: -30,
+    y: 20,
     opacity: 0,
-    duration: 1,
-    deley: 0.5,
-    stagger: 0.3,
 })
 let mm = gsap.matchMedia();
 
@@ -216,7 +195,7 @@ mm.add("(min-width:800px)",()=>{
             marginTop: "-100vh",
             scale: 1.2,
             ease: "power2.out",
-            marginLeft: "30vh",
+            marginLeft: "25vh",
             duration: 1.5,
             //   marginLeft: "30vh"
         }, 'a')
@@ -275,6 +254,104 @@ mm.add("(max-width:799px)",()=>{
     
 
 })
+
+mm.add("(max-width:500px)",()=>{
+
+    var tl5 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#resume",
+            start: "0% 30%",
+            end: "90% 100%",
+            scrub: true,
+            // markers: true,
+        }
+    })
+    
+    tl5.to("#img2", {
+        rotateX: "0deg",
+        duration: 5,
+    })
+        .to("#img3", {
+            rotateX: "0deg",
+            duration: 20,
+        })
+        .to("#resume-container", {
+            scale: "0.6",
+            marginTop: "20vh",
+        })
+        .to("#text", {
+            marginTop: "100vh",
+            scale: 1.2,
+            ease: "power2.out",
+            duration: 1.5,
+        }, 'a')
+        .to("#text", {
+            marginTop: "-60vh",
+            scale: 1.2,
+            ease: "power2.out",
+            duration: 1.5,
+            //   marginLeft: "30vh"
+        }, 'a')
+        .to(".overlay", {
+            opacity: 0.5,
+            ease: "power2.out",
+            duration: 2.5,
+        }, 'a')
+    
+
+})
+
+mm.add("(max-width:400px)",()=>{
+
+    var tl5 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#resume",
+            start: "0% 30%",
+            end: "90% 100%",
+            scrub: true,
+            // markers: true,
+        }
+    })
+    
+    tl5.to("#img2", {
+        rotateX: "0deg",
+        duration: 5,
+    })
+        .to("#img3", {
+            rotateX: "0deg",
+            duration: 20,
+        })
+        .to("#resume-container", {
+            scale: "0.6",
+            marginTop: "20vh",
+        })
+        .to("#text", {
+            marginTop: "100vh",
+            scale: 1.2,
+            ease: "power2.out",
+            duration: 1.5,
+        }, 'a')
+        .to("#text", {
+            marginTop: "-50vh",
+            scale: 0.3,
+            ease: "power2.out",
+            duration: 1.5,
+            //   marginLeft: "30vh"
+        }, 'a')
+        .to(".overlay", {
+            opacity: 0.5,
+            ease: "power2.out",
+            duration: 2.5,
+        }, 'a')
+    
+
+})
+
+
+
+
+
+
 
 
 

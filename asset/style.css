@@ -178,4 +178,18 @@ html {
     .image-container {
         display: block;
     }
+    .h1{
+        font-size: 28px;
+    }
+    #download-resume{
+        font-size: 18px;
+    }
+}
+@media(max-width: 500px){
+    .h1{
+        font-size: 18px;
+    }
+    #download-resume{
+        font-size: 15px;
+    }
 }
