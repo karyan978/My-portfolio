@@ -161,7 +161,7 @@ tl4.from(".card-hover7",{
 })
 let mm = gsap.matchMedia();
 
-mm.add("(min-width:800px)",()=>{
+mm.add("(min-width:1000px)",()=>{
 
     var tl5 = gsap.timeline({
         scrollTrigger: {
@@ -195,7 +195,7 @@ mm.add("(min-width:800px)",()=>{
             marginTop: "-100vh",
             scale: 1.2,
             ease: "power2.out",
-            marginLeft: "25vh",
+            marginLeft: "22vh",
             duration: 1.5,
             //   marginLeft: "30vh"
         }, 'a')
@@ -208,7 +208,7 @@ mm.add("(min-width:800px)",()=>{
 
 })
 
-mm.add("(max-width:799px)",()=>{
+mm.add("(max-width:800px)",()=>{
 
     var tl5 = gsap.timeline({
         scrollTrigger: {
@@ -239,10 +239,9 @@ mm.add("(max-width:799px)",()=>{
             duration: 1.5,
         }, 'a')
         .to("#text", {
-            marginTop: "-70vh",
+            marginTop: "-60vh",
             scale: 1.2,
             ease: "power2.out",
-            marginLeft: "10vh",
             duration: 1.5,
             //   marginLeft: "30vh"
         }, 'a')

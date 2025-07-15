@@ -154,35 +154,34 @@ html {
 }
 
 #computer-setup {
-    display: block;
     width: 500px;
     height: 300px;
     scale: 1.8;
 }
 
 .image-container {
-    display: none;
+    display: none !important;
 }
 
 @media(max-width: 1500px) {
     .image-container {
-        display: none;
+        display: none !important;
     }
 }
 
 @media(max-width: 768px) {
     #computer-setup {
-        display: none;
+        display: none !important;
     }
 
     .image-container {
-        display: block;
+        display: block !important;
     }
     .h1{
-        font-size: 28px;
+        font-size: 24px;
     }
     #download-resume{
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 @media(max-width: 500px){
