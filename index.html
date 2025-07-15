@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <!-- locomotive-scroll css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="asset/logoA.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,96 +36,62 @@
 </head>
 
 <body class="dark:color-white">
-    <div id="main">
-        <nav class="fixed w-full top-0 z-50 bg-gray/90 text-white backdrop-blur-sm shadow-sm z-999 "style="z-index:999;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#home" class="text-2xl font-['Pacifico'] text-primary"><img src="asset/logoA.png" class="w-42 h-12" alt=""></a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link active-nav text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Home</a>
-                    <a href="#about" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">About</a>
-                    <a href="#skills" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Skills</a>
-                    <a href="#projects" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Projects</a>
-                    <a href="#resume" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Resume</a>
-                    <a href="#contact" class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Contact</a>
-                     <button id="darkModeToggle" aria-label="Toggle Dark Mode"><i class="ri-moon-line ri-lg"></i></button>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center cursor-pointer">
-                        <i class="ri-menu-line ri-lg"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Home</a>
-                <a href="#about" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">About</a>
-                <a href="#skills" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Skills</a>
-                <a href="#projects" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Projects</a>
-                <a href="#resume" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Resume</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Contact</a>
-                 <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button"><i class="ri-moon-line ri-lg"></i></button>
-            </div>
-        </div>
-    </nav>
-
-        <!-- Navigation Bar -->
-        <!-- <nav class="bg[#000] shadow-md bg-blur-sm border-b border-white fixed top-0 w-full z-50 text-white"
+    <div id="main" data-scroll-container>
+        <nav class="fixed w-full top-0 z-50 bg-gray/90 text-white backdrop-blur-sm shadow-sm z-999 "
             style="z-index:999;">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
-                    <div class="flex items-center z-10">
-                        <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
-                                class="w-50 h-14 rounded-full"></span>
-                        <span id="name" class="font-['Pacifico'] text-2xl text-white absolute left-[74px]">ryan</span>
+                    <div class="flex items-center">
+                        <a href="#home" class="text-2xl font-['Pacifico'] text-primary"><img src="asset/logoA.png"
+                                class="w-42 h-12" alt=""></a>
                     </div>
-                    <div style="height: 50px; width: 150px; background-color: rgba(234, 255, 0, 0.342); position: absolute; z-index: 1;"
-                        class="blur-xl"></div>
-                    <div class=" hidden md:flex flex items-center space-x-4 font['Rowdies']" id="desktop-menu">
-                        <a href="#home" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="#about" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#skills" class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Skills</a>
-                        <a href="#projects"
-                            class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Projects</a>
-                        <a href="#contact"
-                            class="text-white hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
-                        <button id="darkModeToggle"
-                            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
-                        </button>
-                    </div>-->
-                    <!-- <div class="md:bg-gray w-30"> -->
-                    <!--<div class="w-18 h-18 flex items-center md:hidden cursor-pointer" id="mobile-menu-button">
-                        <i class="ri-menu-line ri-lg text-white-700"></i>
-                    </div>
-
-                    <div class="block md:hidden flex flex-col mt-4 pb-2 space-y-3">
-                        <button id="darkModeToggle"
-                            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 cursor-pointer">
-                            <i class="ri-moon-line ri-lg"></i>
-                        </button>
-                    </div>
-
-                    <div id="mobile-menu" class="block md:hidden flex flex-col mt-5 pb-2 space-y-3">
+                    <div class="hidden md:flex items-center space-x-8">
                         <a href="#home"
-                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Home</a>
+                            class="nav-link active-nav text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Home</a>
                         <a href="#about"
-                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">About</a>
+                            class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">About</a>
                         <a href="#skills"
-                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Skills</a>
+                            class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Skills</a>
                         <a href="#projects"
-                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">projects</a>
+                            class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Projects</a>
+                        <a href="#resume"
+                            class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Resume</a>
                         <a href="#contact"
-                            class="t-white hover:text-primary transition-colors duration-300 py-2 cursor-pointer">Contact</a>
-                    </div>-->
-                    <!-- </div>
+                            class="nav-link text-gray-800 hover:text-primary focus:text-red-500 transition-colors text-white">Contact</a>
+                        <button id="darkModeToggle" aria-label="Toggle Dark Mode"><i
+                                class="ri-moon-line ri-lg"></i></button>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button"
+                            class="w-10 h-10 flex items-center justify-center cursor-pointer">
+                            <i class="ri-menu-line ri-lg"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </nav> -->
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#home"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Home</a>
+                    <a href="#about"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">About</a>
+                    <a href="#skills"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Skills</a>
+                    <a href="#projects"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Projects</a>
+                    <a href="#resume"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Resume</a>
+                    <a href="#contact"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button">Contact</a>
+                    <button id="darkModeToggle" aria-label="Toggle Dark Mode"
+                        class="block px-3 py-2 text-gray-800 hover:bg-primary/10 hover:text-primary rounded-button"><i
+                            class="ri-moon-line ri-lg"></i></button>
+                </div>
+            </div>
+        </nav>
+
         <!-- Hero Section -->
         <section id="home" class="pt-40 pb-16 relative overflow-hidden bg-black-900 border-b border-white">
             <div class="absolute top-0 left-0 w-full h-full" data-us-project="rw5CfKFTOAN0SeIS5Pqt"
@@ -156,18 +126,23 @@
                         <p class="text-white mb-6">Crafting seamless web experiences from front to back.</p>
                         <div class="flex space-x-4">
                             <a href="#resume"
-                                class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
+                                class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer resume">Download
                                 Resume</a>
                             <div class="h-20 w-20 rounded-full absolute top-4/3 bg-opacity-50 blur-sm z-1 bg-red-200">
                             </div>
                             <a href="#contact"
-                                class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all cursor-pointer">Contact
+                                class="bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 transition-all cursor-pointer contact">Contact
                                 Me</a>
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <div class="relative" id="image-container">
-                            <model-viewer id="computer-setup" src="asset/gaming_desktop_pc_blend_file.glb" autoplay
+                        <div class="relative image-container" id="image-container">
+                            <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0 hidden"
+                            id="image-container">
+                            <img id="profile-image" src="asset/Aryan-Kumar.png" alt="Aryan Kumar"
+                                class="w-full h-full object-cover">
+                        </div>
+                            <model-viewer class="block" id="computer-setup" src="asset/gaming_desktop_pc_blend_file.glb" autoplay
                                 auto-rotate camera-controls disable-zoom min-camera-orbit="auto 90deg auto"
                                 max-camera-orbit="auto 90deg auto" shadow-intensity="0"
                                 interaction-policy="allow-when-focused"></model-viewer>
@@ -188,17 +163,17 @@
             <div class="blur-xl" `
                 style="height: 200px; width: 200px; background-color: rgba(207, 134, 8, 0.164); border-radius: 50%; position: absolute; top: 5%; right: 3%; z-index: 1;">
             </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden" id="container">
                 <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0"
+                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl opacity-0 about-image"
                         id="image-container">
                         <img id="profile-image" src="asset/Aryan-Kumar.png" alt="Aryan Kumar"
                             class="w-full h-full object-cover">
                     </div>
                     <div class="h-90 w-90 rounded-full absolute left-60 top-10 bg-opacity-10 blur bg-black-200"></div>
 
-                    <div id="about-content" class="h-[400px] overflow-hidden">
+                    <div id="about-content" class="scroll-box" data-scroll data-scroll-speed="5">
                         <div>
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">Who I Am</h3>
                             <p class="text-gray-600 mb-6">Hi, I’m <span class="text-primary text-bold text-xl">Aryan
@@ -248,8 +223,8 @@
                                 </div>
 
                                 <div>
-                                    <h4 class="font-medium text-gray-800">BCA in Computer Science</h4>
-                                    <p class="text-sm text-gray-600">Nalanda College, Bhihar-Sharif, 2024-2027</p>
+                                    <h4 class="font-medium text-gray-800">ISC in Science</h4>
+                                    <p class="text-sm text-gray-600">Nardiganj College Nardiganj, Nardiganj, 2024-2027</p>
                                 </div>
 
                             </div>
@@ -292,30 +267,30 @@
                                 <div class="mb-4">
                                     <div class="flex justify-between mb-1">
                                         <span>React</span>
-                                        <span>80%</span>
+                                        <span>70%</span>
                                     </div>
                                     <div class="w-full bg-gray-700 rounded-full h-3">
-                                        <div class="bg-cyan-400 h-3 rounded-full" style="width: 80%"></div>
+                                        <div class="bg-cyan-400 h-3 rounded-full" style="width: 70%"></div>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
                                     <div class="flex justify-between mb-1">
                                         <span>php</span>
-                                        <span>75%</span>
+                                        <span>85%</span>
                                     </div>
                                     <div class="w-full bg-gray-700 rounded-full h-3">
-                                        <div class="bg-lime-500 h-3 rounded-full" style="width: 75%"></div>
+                                        <div class="bg-lime-500 h-3 rounded-full" style="width: 85%"></div>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
                                     <div class="flex justify-between mb-1">
                                         <span>Laravel</span>
-                                        <span>70%</span>
+                                        <span>60%</span>
                                     </div>
                                     <div class="w-full bg-gray-700 rounded-full h-3">
-                                        <div class="bg-emerald-400 h-3 rounded-full" style="width: 70%"></div>
+                                        <div class="bg-emerald-400 h-3 rounded-full" style="width: 60%"></div>
                                     </div>
                                 </div>
                             </div>
@@ -325,609 +300,657 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <div class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200"></div>
+        <!-- Skills Section -->
+        <div class="h-30 w-30 rounded-full absolute left-60 bottom-0 bg-opacity-10 blur z-1 bg-yellow-200"></div>
 
-    <section id="skills" class="relative py-16">
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(255, 0, 8, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(13, 0, 255, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(220, 235, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
+        <section id="skills" class="relative py-16">
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(255, 0, 8, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(13, 0, 255, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(220, 235, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
 
-            <!-- frontend skills -->
-            <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md skill-card">
-                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                    <i class="ri-layout-line ri-lg text-primary"></i>
+                <!-- frontend skills -->
+                <div class="border border-white backdrop-blur-xl bg-white/5 p-6 rounded-lg shadow-md skill-card">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                        <i class="ri-layout-line ri-lg text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Frontend</h3>
+                    <hr class="mb-4">
+                    <div class="flex flex-wrap flex-row gap-10">
+                        <div class="w-20 h-20 flex items-center justify-center bg-red-400 rounded-full mb-4">
+                            <a href="https://www.w3schools.com/howto/howto_make_a_website.asp"><i
+                                    class="ri-html5-line text-5xl text-white"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-400 rounded-full mb-4">
+                            <a href="https://www.w3schools.com/css/"><i
+                                    class="ri-css3-line text-5xl text-white"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-600 rounded-full mb-4">
+                            <a href="https://www.w3schools.com/js/"><i
+                                    class="ri-javascript-line text-5xl text-yellow-400"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <a href="https://react.dev/learn/tutorial-tic-tac-toe"><i
+                                    class="ri-reactjs-line text-5xl text-sky-400"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <a href="https://tailwindcss.com/"><i
+                                    class="ri-tailwind-css-fill text-5xl text-sky-400"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-md mb-4">
+                            <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"><i
+                                    class="ri-bootstrap-line text-5xl text-white"></i></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-black rounded-full mb-4">
+                            <a href="https://gsap.com/"><img src="asset/gsap.svg" alt="" class="w-12 h-12 "></a>
+                        </div>
+                        <div class="w-20 h-20 flex items-center justify-center bg-gray-300 rounded-full mb-4">
+                            <a href="https://threejs.org/"><img src="asset/three-js-icon.svg" alt=""
+                                    class="w-12 h-12 "></a>
+                        </div>
+                    </div>
+
+
                 </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Frontend</h3>
-                <hr class="mb-4">
-                <div class="flex flex-wrap flex-row gap-10">
-                    <div class="w-20 h-20 flex items-center justify-center bg-red-400 rounded-full mb-4">
-                       <a href="https://www.w3schools.com/howto/howto_make_a_website.asp"><i class="ri-html5-line text-5xl text-white"></i></a>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- backend skills -->
+
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 p-6 rounded-lg shadow-md mt-5 skill-card">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-server-line ri-lg text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend</h3>
+                        <hr class="mb-4">
+                        <div class="flex flex-wrap flex-row gap-10">
+                            <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-full mb-4">
+                                <a href="https://www.php.net/"><i class="ri-php-line text-5xl text-white"></i></a>
+                            </div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-lg mb-4">
+                                <a href="https://laravel.com/"><i class="fab fa-laravel text-5xl text-red-500"></i></a>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-blue-400 rounded-full mb-4">
-                        <a href="https://www.w3schools.com/css/"><i class="ri-css3-line text-5xl text-white"></i></a>
+
+                    <!-- database -->
+
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 p-6 rounded-lg shadow-md mt-5 skill-card">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <a href="https://www.mysql.com/"><i class="ri-database-2-line ri-lg text-primary"></i></a>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Database</h3>
+                        <hr class="mb-4">
+                        <div class="flex flex-wrap flex-row gap-10">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-full mb-4">
+                                <img src="asset/mysql.png" alt="" class="w-12 h-12 ">
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-gray-600 rounded-full mb-4">
-                        <a href="https://www.w3schools.com/js/"><i class="ri-javascript-line text-5xl text-yellow-400"></i></a>
-                    </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <a href="https://react.dev/learn/tutorial-tic-tac-toe"><i class="ri-reactjs-line text-5xl text-sky-400"></i></a>
-                    </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <a href="https://tailwindcss.com/"><i class="ri-tailwind-css-fill text-5xl text-sky-400"></i></a>
-                    </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-md mb-4">
-                        <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"><i class="ri-bootstrap-line text-5xl text-white"></i></a>
-                    </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-black rounded-full mb-4">
-                        <a href="https://gsap.com/"><img src="asset/gsap.svg" alt="" class="w-12 h-12 "></a>
-                    </div>
-                    <div class="w-20 h-20 flex items-center justify-center bg-gray-300 rounded-full mb-4">
-                        <a href="https://threejs.org/"><img src="asset/three-js-icon.svg" alt="" class="w-12 h-12 "></a>
+
+                    <!-- tools -->
+
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 p-6 rounded-lg shadow-md mt-5 skill-card">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-tools-line ri-lg text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools</h3>
+                        <hr class="mb-4">
+                        <div class="flex flex-wrap flex-row gap-10">
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
+                                <i class="ri-github-line text-5xl text-white"></i>
+                            </div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
+                                <img src="asset/vsCode.png" alt="" class="w-12 h-12 ">
+                            </div>
+                            <div class="w-20 h-20 flex items-center justify-center bg-yellow-300 rounded-full mb-4">
+                                <img src="asset/docker.png" alt="" class="w-12 h-12 ">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- backend skills -->
-
-                <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md mt-5 skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <i class="ri-server-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Backend</h3>
-                    <hr class="mb-4">
-                    <div class="flex flex-wrap flex-row gap-10">
-                        <div class="w-20 h-20 flex items-center justify-center bg-blue-900 rounded-full mb-4">
-                            <a href="https://www.php.net/"><i class="ri-php-line text-5xl text-white"></i></a>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-lg mb-4">
-                            <a href="https://nodejs.org/en"><i class="ri-nodejs-line text-5xl text-green-500"></i></a>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <!-- database -->
-
-                <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md mt-5 skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <a href="https://www.mysql.com/"><i class="ri-database-2-line ri-lg text-primary"></i></a>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Database</h3>
-                    <hr class="mb-4">
-                    <div class="flex flex-wrap flex-row gap-10">
-                        <div class="w-20 h-20 flex items-center justify-center bg-gray-200 rounded-full mb-4">
-                            <img src="asset/mysql.png" alt="" class="w-12 h-12 ">
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-blue-200 rounded-full mb-4">
-                            <a href="https://www.mongodb.com/"><img src="asset/mongodb.png" alt="" class="w-12 h-12 "></a>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <!-- tools -->
-
-                <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md mt-5 skill-card">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
-                        <i class="ri-tools-line ri-lg text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools</h3>
-                    <hr class="mb-4">
-                    <div class="flex flex-wrap flex-row gap-10">
-                        <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
-                            <i class="ri-github-line text-5xl text-white"></i>
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-gray-900 rounded-full mb-4">
-                            <img src="asset/vsCode.png" alt="" class="w-12 h-12 ">
-                        </div>
-                        <div class="w-20 h-20 flex items-center justify-center bg-yellow-300 rounded-full mb-4">
-                            <img src="asset/docker.png" alt="" class="w-12 h-12 ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Projects</h2>
-            <div class="
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Projects</h2>
+                <div class="
             grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
              flex flex-row overflow-hidden">
-                <!-- Project 1 -->
-                <div
-                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover1">
-                    <div class="h-48 overflow-hidden">
-                        <img src="asset/Project1.png" alt="Pani-Patasha" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pani Patasha</h3>
-                        <p class="text-gray-600 mb-4">A burst of flavor in every bite – Pani Patasha, pure delight!</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Html/Css</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Javascript/Three.js</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">gsap</span>
-                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">PHP</span>
+                    <!-- Project 1 -->
+                    
+                     <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover1">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/image.png" alt="Pani-Patasha" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#"
-                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
-                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
-                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Project 2 -->
-
-
-                <div
-                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover1">
-                    <div class="h-48 overflow-hidden">
-                        <img src="asset/image.png" alt="Pani-Patasha" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Webhouse india</h3>
-                        <p class="text-gray-600 mb-4">A burst of flavor in every bite – Pani Patasha, pure delight!</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Html</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">css</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">js</span>  
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Webhouse india</h3>
+                            <p class="text-gray-600 mb-4">A burst of flavor in every bite – Pani Patasha, pure delight!
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
                                 <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>  
-                                                 </div>
-                        <div class="flex space-x-3">
-                            <a href="http://web-house-indol.vercel.app"
-                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
-                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
-                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
-                            </a>
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Html</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">css</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">js</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="http://web-house-indol.vercel.app"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/karyan978/WebHouse"
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project3 -->
-                <div
-                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover2">
-                    <div class="h-48 overflow-hidden">
-                        <img src="asset/Project2.png" alt="e-shop" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">E-SHOP</h3>
-                        <p class="text-gray-600 mb-4">Your one-stop shop for everything you love!</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">React</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Node.js</span>
-                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded"></span>
-                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded"></span>
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover2">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#"
-                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
-                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
-                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
-                            </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">PizzaPan</h3>
+                            <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://pizzapan.vercel.app/"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/karyan978/pizzapan"
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project 4 -->
-                <div
-                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
-                    <div class="h-48 overflow-hidden">
-                        <img src="asset/Project3.png" alt="PizzaPan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">PizzaPan</h3>
-                        <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
-                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover3">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/Apple-Watch.png" alt="PizzaPan" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#"
-                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
-                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
-                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
-                            </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Apple-Watch</h3>
+                            <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">react</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="net-flix-website.vercel.app"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="#"
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                 <div
-                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
-                    <div class="h-48 overflow-hidden">
-                        <img src="asset/Apple-Watch.png" alt="PizzaPan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">PizzaPan</h3>
-                        <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
-                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover4">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/project-6.png" alt="PizzaPan" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="net-flix-website.vercel.app"
-                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
-                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
-                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
-                            </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Rydian</h3>
+                            <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="#"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/karyan978/Rydain"
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                 <div
-                    class="border border-white backdrop-blur-xl bg-black/30 rounded-lg overflow-hidden shadow-md card-hover3">
-                    <div class="h-48 overflow-hidden">
-                        <img src="asset/project-6.png" alt="PizzaPan" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Rydian</h3>
-                        <p class="text-gray-600 mb-4">Fresh out of the oven, full of love – only at PizzaPan.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
-                            <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
-                            <span
-                                class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                    <!-- Project 1 -->
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover5">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/Project1.png" alt="Pani-Patasha" class="w-full h-full object-cover">
                         </div>
-                        <div class="flex space-x-3">
-                            <a href="#"
-                                class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
-                                <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
-                                <i class="ri-github-line ri-sm mr-1"></i> GitHub
-                            </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Pani Patasha</h3>
+                            <p class="text-gray-600 mb-4">A burst of flavor in every bite – Pani Patasha, pure delight!
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Html/Css</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Javascript/Three.js</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">gsap</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">PHP</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Locomotive.js</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="#"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/karyan978/PaniPatasha."
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+
+                    <!-- Project 2 -->
+
+
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover6">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/vastramora.png" alt="Pani-Patasha" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">vastramora</h3>
+                            <p class="text-gray-600 mb-4">A burst of flavor in every bite – Pani Patasha, pure delight!
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">react</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">framer-motion</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">js</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="http://web-house-indol.vercel.app"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/karyan978/Vastramora"
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project3 -->
+                    <div
+                        class="border border-white backdrop-blur-xl bg-white/5 rounded-lg overflow-hidden shadow-md card-hover7">
+                        <div class="h-48 overflow-hidden">
+                            <img src="asset/Netflex.png" alt="e-shop" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Netflix</h3>
+                            <p class="text-gray-600 mb-4">Your one-stop shop for everything you love!</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">html</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">css</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Bootstrap</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">js</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="#"
+                                    class="flex items-center justify-center bg-primary text-white px-4 py-2 rounded-button text-sm font-medium hover:bg-primary/90 transition-all cursor-pointer">
+                                    <i class="ri-eye-line ri-sm mr-1"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/karyan978/NetFlixWebsite"
+                                    class="flex items-center justify-center bg-gray-100 text-gray-800 px-4 py-2 rounded-button text-sm font-medium hover:bg-gray-200 transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-sm mr-1"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- resume -->
-    <!-- <div class="h-50 w-50 felx justify-center bg-black">
-     <div class="text-center text-black d-flex justify-center pb-5">
-             <div class="h-60 w-50 bg-transparent backdrop-blur-sm border-radius-lg border-white border-2">
-                <span>My resume</span>
-                <h3>I Would Love to make your Ideas real</h3>
-                <p> I’m a Full Stack Developer who builds fast, responsive, and dynamic websites — from frontend design
-                    to backend logic.</p>
-                    <div class="mt-20">
-                <a href="#"
-                    class="bg-primary text-white px-3  py-3 rounded-button font-medium hover:bg-primary/90 z-10 transition-all cursor-pointer">Download
-                    Resume</a>
+        </section>
+
+        <section id="resume">
+            <div class="h-screen0 pt-5 relative z-10" id="resume">
+                <div class="w-[50%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto perspective-500">
+                    <div id="resume-container">
+                        <div id="img1" class="img transform transition duration-500 mt-20 "
+                            style=" transform-origin: top;">
+                            <video src="asset/aryan.video - Copy.mp4" autoplay loop muted></video>
+                        </div>
+                        <div id="img2" class="img transform transition duration-500"
+                            style=" transform-origin: top; transform: rotateX(-90deg);">
+                            <img src="asset/resume1.jpg" alt="">
+                        </div>
+                        <div id="img3" class="img pb-5 transform transition duration-500"
+                            style=" transform-origin: top; transform: rotateX(-90deg);">
+                            <img src="asset/resume2.jpg" alt="">
+                        </div>
                     </div>
-                    </div> -->
-    <!-- </div>
-    </div> -->
-    <section id="resume">
-        <div class="h-screen0 pt-5 relative z-10" id="resume">
-            <div class="w-[50%] w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] mx-auto perspective-500">
-                <div id="resume-container">
-                    <div id="img1" class="img transform transition duration-500 mt-20 " style=" transform-origin: top;">
-                        <video src="asset/aryan.video - Copy.mp4" autoplay loop muted></video>
-                    </div>
-                    <div id="img2" class="img transform transition duration-500"
-                        style=" transform-origin: top; transform: rotateX(-90deg);">
-                        <img src="asset/resume1.jpg" alt="">
-                    </div>
-                    <div id="img3" class="img pb-5 transform transition duration-500"
-                        style=" transform-origin: top; transform: rotateX(-90deg);">
-                        <img src="asset/resume2.jpg" alt="">
+                    <div class="text text-center font-bold text-4xl font-bold text-black mb-2 absolute" id="text"
+                        style="z-index: 99;">
+                        <h1 class="h1" style="z-index: 99;">create by<br> Aryan kumar</h1>
+
+                        <div class="">
+                            <a href="asset/Aryan-resume.jpg" id="download-resume"
+                                class="bg-primary text-white px-2  py-2 rounded-button font-medium text-xl hover:bg-primary/90 z-10 transition-all cursor-pointer"><button
+                                    onclick="openResume()"><i class="ri-download-line mr-2"></i>Download
+                                    Resume</button></a>
+                        </div>
                     </div>
                 </div>
-                <div class="text text-center font-bold text-4xl font-bold text-black mb-2 absolute" id="text"
-                    style="z-index: 99;">
-                    <h1 class="h1" style="z-index: 99;">create by<br> Aryan kumar</h1>
+                <div class="h-screen0 w-[100%] bg-[#034C53] fixed overlay absolute top-0 bottom-0 opacity-0"
+                    style="z-index: 20;"></div>
 
-                    <div class="">
-                        <a href="asset/Aryan-resume.jpg" id="download-resume" 
-                            class="bg-primary text-white px-2  py-2 rounded-button font-medium text-xl hover:bg-primary/90 z-10 transition-all cursor-pointer"><button
-                                onclick="openResume()"><i class="ri-download-line mr-2"></i>Download
-                                Resume</button></a>
-                    </div>
-                </div>
             </div>
-            <div class="h-screen0 w-[100%] bg-[#034C53] fixed overlay absolute top-0 bottom-0 opacity-0"
-                style="z-index: 20;"></div>
 
-        </div>
-
-    </section>
+        </section>
 
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="relative py-16">
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(0, 162, 255, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(217, 255, 0, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
-        </div>
-        <div class="blur-xl"
-            style="height: 200px; width: 200px; background-color: rgba(235, 96, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Get In Touch</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="z-10">
+        <!-- Contact Section -->
+        <section id="contact" class="relative py-16">
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(0, 162, 255, 0.053); border-radius: 50%; position: absolute; top: 10%; left: 10%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(217, 255, 0, 0.057); border-radius: 50%; position: absolute; top: 70%; left: 40%; z-index: 1;">
+            </div>
+            <div class="blur-xl"
+                style="height: 200px; width: 200px; background-color: rgba(235, 96, 10, 0.082); border-radius: 50%; position: absolute; top: 3%; right: 3%; z-index: 1;">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Get In Touch</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="z-10">
+                        <div>
+                            <h1 id="contact-animation" class="text-3xl font-bold mb-4">Say Hello 👋</h1>
+                            <h2 id="contact-animation" class="text-lg md:text-2xl  mb-6">Have a project in mind? Let’s
+                                bring
+                                it to life. Contact me today!
+                            </h2>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-mail-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 id="contact-animation" class="font-medium text-gray-800">Email</h4>
+                                    <p id="contact-animation" class="text-gray-600">karyan4537@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-phone-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 id="contact-animation" class="font-medium text-gray-800">Phone</h4>
+                                    <p id="contact-animation" class="text-gray-600">+91 7564954095</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
+                                    <i class="ri-map-pin-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 id="contact-animation" class="font-medium text-gray-800">Location</h4>
+                                    <p id="contact-animation" class="text-gray-600">Bhihar, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 id="contact-animation" class="text-xl font-semibold text-gray-800 mb-4">Connect With Me
+                            </h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/aryan-kumar-9b8883358/"
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                    <i class="ri-linkedin-line ri-lg"></i>
+                                </a>
+                                <a href="https://github.com/karyan978"
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                    <i class="ri-github-line ri-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                    <i class="ri-twitter-line ri-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                                    <i class="ri-instagram-line ri-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                        <h1 id="contact-animation" class="text-3xl font-bold mb-4">Say Hello 👋</h1>
-                        <h2 id="contact-animation" class="text-lg md:text-2xl  mb-6">Have a project in mind? Let’s bring
-                            it to life. Contact me today!
-                        </h2>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
-                                <i class="ri-mail-line ri-lg text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 id="contact-animation" class="font-medium text-gray-800">Email</h4>
-                                <p id="contact-animation" class="text-gray-600">karyan4537@gmail.com</p>
-                            </div>
+                        <div class="border border-white backdrop-blur-xl bg-white/5 p-6 rounded-lg shadow-md"
+                            style="z-index: 99;" id="contact-form">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
+                            <form id="contactForm">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your
+                                        Name</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Aryan Kumar" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your
+                                        Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Aryan@example.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="subject"
+                                        class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                    <input type="text" id="subject" name="subject"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Project Inquiry" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your
+                                        Message</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                        placeholder="Hello, I'd like to discuss a project..." required></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all cursor-pointer">Send
+                                    Message</button>
+                            </form>
                         </div>
-                        <div class="flex items-start">
-                            <div
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
-                                <i class="ri-phone-line ri-lg text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 id="contact-animation" class="font-medium text-gray-800">Phone</h4>
-                                <p id="contact-animation" class="text-gray-600">+91 7564954095</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3 mt-1">
-                                <i class="ri-map-pin-line ri-lg text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 id="contact-animation" class="font-medium text-gray-800">Location</h4>
-                                <p id="contact-animation" class="text-gray-600">Bhihar, India</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <h3 id="contact-animation" class="text-xl font-semibold text-gray-800 mb-4">Connect With Me</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://www.linkedin.com/in/aryan-kumar-9b8883358/"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-linkedin-line ri-lg"></i>
-                            </a>
-                            <a href="https://github.com/karyan978"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-github-line ri-lg"></i>
-                            </a>
-                            <a href="#"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-twitter-line ri-lg"></i>
-                            </a>
-                            <a href="#"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-instagram-line ri-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="border border-white backdrop-blur-xl bg-black/30 p-6 rounded-lg shadow-md"
-                        style="z-index: 99;" id="contact-form">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
-                        <form id="contactForm">
-                            <div class="mb-4">
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                                <input type="text" id="name" name="name"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                    placeholder="Aryan Kumar" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your
-                                    Email</label>
-                                <input type="email" id="email" name="email"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                    placeholder="Aryan@example.com" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="subject"
-                                    class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                                <input type="text" id="subject" name="subject"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                    placeholder="Project Inquiry" required>
-                            </div>
-                            <div class="mb-6">
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your
-                                    Message</label>
-                                <textarea id="message" name="message" rows="4"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                                    placeholder="Hello, I'd like to discuss a project..." required></textarea>
-                            </div>
-                            <button type="submit"
-                                class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-all cursor-pointer">Send
-                                Message</button>
-                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer -->
+        </section>
+        <!-- Footer -->
 
-    <footer class="relative text-white bg-black md:bg-transparent sm:bg-black py-8">
-        <div class="absolute bottom-0 left-0 w-full h-50 md:h-100">
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
-                class="transition duration-300 ease-in-out delay-150">
-                <style>
-                    .path-0 {
-                        animation: pathAnim-0 4s;
-                        animation-timing-function: linear;
-                        animation-iteration-count: infinite;
-                    }
-
-                    @keyframes pathAnim-0 {
-                        0% {
-                            d: path("M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z");
+        <footer class="relative text-white bg-black md:bg-transparent sm:bg-black py-8">
+            <div class="absolute bottom-0 left-0 w-full h-50 md:h-100">
+                <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg"
+                    class="transition duration-300 ease-in-out delay-150">
+                    <style>
+                        .path-0 {
+                            animation: pathAnim-0 4s;
+                            animation-timing-function: linear;
+                            animation-iteration-count: infinite;
                         }
 
-                        25% {
-                            d: path("M 0,400 L 0,150 C 179.5,164.5 359,179 599,179 C 839,179 1139.5,164.5 1440,150 L 1440,400 L 0,400 Z");
+                        @keyframes pathAnim-0 {
+                            0% {
+                                d: path("M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z");
+                            }
+
+                            25% {
+                                d: path("M 0,400 L 0,150 C 179.5,164.5 359,179 599,179 C 839,179 1139.5,164.5 1440,150 L 1440,400 L 0,400 Z");
+                            }
+
+                            50% {
+                                d: path("M 0,400 L 0,150 C 241,163 482,176 722,176 C 962,176 1201,163 1440,150 L 1440,400 L 0,400 Z");
+                            }
+
+                            75% {
+                                d: path("M 0,400 L 0,150 C 252,139.5 504,129 744,129 C 984,129 1212,139.5 1440,150 L 1440,400 L 0,400 Z");
+                            }
+
+                            100% {
+                                d: path("M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z");
+                            }
                         }
+                    </style>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+                            <stop offset="5%" stop-color="#000"></stop>
+                            <stop offset="95%" stop-color="#8ED1FC"></stop>
+                        </linearGradient>
+                    </defs>
 
-                        50% {
-                            d: path("M 0,400 L 0,150 C 241,163 482,176 722,176 C 962,176 1201,163 1440,150 L 1440,400 L 0,400 Z");
-                        }
+                    <path
+                        d="M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z"
+                        stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                        class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+                </svg>
 
-                        75% {
-                            d: path("M 0,400 L 0,150 C 252,139.5 504,129 744,129 C 984,129 1212,139.5 1440,150 L 1440,400 L 0,400 Z");
-                        }
-
-                        100% {
-                            d: path("M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z");
-                        }
-                    }
-                </style>
-                <defs>
-                    <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
-                        <stop offset="5%" stop-color="#000"></stop>
-                        <stop offset="95%" stop-color="#8ED1FC"></stop>
-                    </linearGradient>
-                </defs>
-
-                <path d="M 0,400 L 0,150 C 249,149.5 498,149 738,149 C 978,149 1209,149.5 1440,150 L 1440,400 L 0,400 Z"
-                    stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
-                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-            </svg>
-
-        </div>
-        <!-- <div class="blur-xl" style="height: 100px; width: 100px; background-color: royalblue; position: absolute; border-radius: 50%;z-index: 1;"></div> -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative mb-10" style="margin-top: 120px;">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex flex-row">
-                        <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png" alt=""
-                                class="h-14 w-30 rounded-full"></span>
-                        <div><span class="text-3xl font-['Pacifico'] text-white mt-2 absolute left-[74px]">ryan</span>
+            </div>
+            <!-- <div class="blur-xl" style="height: 100px; width: 100px; background-color: royalblue; position: absolute; border-radius: 50%;z-index: 1;"></div> -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative mb-10" style="margin-top: 120px;">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <div class="flex flex-row">
+                            <span id="logo" class="text-2xl font-['Pacifico'] text-white"><img src="/asset/LogoA.png"
+                                    alt="" class="h-14 w-30 rounded-full"></span>
+                            <div><span
+                                    class="text-3xl font-['Pacifico'] text-white mt-2 absolute left-[74px]">ryan</span>
+                            </div>
                         </div>
+                        <p class="text-yellow-400 mt-2">© 2025 Aryan Kumar. All rights reserved.</p>
                     </div>
-                    <p class="text-yellow-400 mt-2">© 2025 Aryan Kumar. All rights reserved.</p>
+
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/aryan-kumar-9b8883358/"
+                            class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                            <i class="ri-linkedin-line ri-lg"></i>
+                        </a>
+                        <a href="https://github.com/karyan978"
+                            class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                            <i class="ri-github-line ri-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                            <i class="ri-twitter-line ri-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+                            <i class="ri-instagram-line ri-lg"></i>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="flex space-x-4">
-                            <a href="https://www.linkedin.com/in/aryan-kumar-9b8883358/"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-linkedin-line ri-lg"></i>
-                            </a>
-                            <a href="https://github.com/karyan978"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-github-line ri-lg"></i>
-                            </a>
-                            <a href="#"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-twitter-line ri-lg"></i>
-                            </a>
-                            <a href="#"
-                                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
-                                <i class="ri-instagram-line ri-lg"></i>
-                            </a>
-                        </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop"
-        class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer"
-        style="z-index: 99;">
-        <i class="ri-arrow-up-line ri-lg"></i>
-    </button> 
+        <!-- Back to Top Button -->
+        <button id="backToTop"
+            class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer"
+            style="z-index: 99;">
+            <i class="ri-arrow-up-line ri-lg"></i>
+        </button>
 
-    <!-- Success Modal -->
-    <div id="successModal"
-        class="fixed inset-0 flex items-center justify-center z-50 invisible opacity-0 transition-all duration-300">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div
-            class="bg-white rounded-lg p-8 max-w-md w-full relative z-10 transform scale-95 transition-all duration-300">
-            <div class="flex justify-end">
-                <button id="closeModal" class="text-gray-500 hover:text-gray-700 cursor-pointer">
-                    <i class="ri-close-line ri-lg"></i>
-                </button>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="ri-check-line ri-2x text-green-500"></i>
+        <!-- Success Modal -->
+        <div id="successModal"
+            class="fixed inset-0 flex items-center justify-center z-50 invisible opacity-0 transition-all duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div
+                class="bg-white rounded-lg p-8 max-w-md w-full relative z-10 transform scale-95 transition-all duration-300">
+                <div class="flex justify-end">
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700 cursor-pointer">
+                        <i class="ri-close-line ri-lg"></i>
+                    </button>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
-                <p class="text-gray-600">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-check-line ri-2x text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
+                    <p class="text-gray-600">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+
+    <!-- <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollSmoother.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+
+
+    <!-- locomotive-scroll cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- 3d model cdn -->
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 

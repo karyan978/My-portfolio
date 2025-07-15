@@ -1,94 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-:where([class^="ri-"])::before { content: "\f3c2"; }
-       *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-          font-family: "Cinzel Decorative", serif;
 
-       }
-        body,html {
-              font-family: 'PT Serif', sans-serif;
-              overflow-x: hidden;
-             scroll-behavior: smooth;
-             scrollbar-width: none;
-             -ms-overflow-style: none; 
-            cursor: none;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
-        }
-        .floating-icons i {
-            color: lightcoral;
-            animation: float 10s infinite ease-in-out;
-            opacity: 0.3;
-            position: absolute;
-        }
-        .floating-icons img {
-            animation: float 10s infinite ease-in-out;
-            opacity: 0.3;
-            position: absolute;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(5deg); }
-            50% { transform: translateY(0) rotate(0deg); }
-            75% { transform: translateY(20px) rotate(-5deg); }
-        }
-        .progress-bar {
-            height: 8px;
-            border-radius: 4px;
-            background-color: #e5e7eb;
-            overflow: hidden;
-        }
-        .progress-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 1s ease-in-out;
-        }
-        .card-hover1 {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover1:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .card-hover2 {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover2:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .card-hover3 {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-hover3:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .skill-card {
-            transition: all 0.3s ease;
-        }
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .dark-mode {
-            background-color: #1f2937;
-            color: #f3f4f6;
-        }
-        .image-container{
-            position: relative;
-            width: 500px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center
-        }
-    
-        #computer-setup{
-           width: 500px;
-           height: 300px;
-           scale: 1.8;
-        }
+:where([class^="ri-"])::before {
+    content: "\f3c2";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel Decorative", serif;
+
+}  
+
+body,
+html {
+    font-family: 'PT Serif', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: none;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
+}
+
+.floating-icons i {
+    color: lightcoral;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.floating-icons img {
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.3;
+    position: absolute;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(20px) rotate(-5deg);
+    }
+}
+
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e5e7eb;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+
+@media(max-width: 768px) {
+    #resume {
+        font-size: 14px !important;
+    }
+
+    #contact {
+        font-size: 14px !important;
+    }
+}
+
+@media(max-width: 480px) {
+    .resume {
+        font-size: 10px !important;
+    }
+
+    .contact {
+        font-size: 10px !important;
+    }
+}
+
+.scroll-box {
+    height: 450px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-box::-webkit-scrollbar {
+    display: none;
+}
+
+.card-hover1 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover2 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    background-color: #1f2937;
+    color: #f3f4f6;
+}
+
+.image-container {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#computer-setup {
+    display: block;
+    width: 500px;
+    height: 300px;
+    scale: 1.8;
+}
+
+.image-container {
+    display: none;
+}
+
+@media(max-width: 1500px) {
+    .image-container {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    #computer-setup {
+        display: none;
+    }
+
+    .image-container {
+        display: block;
+    }
+}
