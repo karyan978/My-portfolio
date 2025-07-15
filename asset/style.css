@@ -186,9 +186,9 @@ html {
 }
 @media(max-width: 500px){
     .h1{
-        font-size: 18px;
+        font-size: 29px;
     }
     #download-resume{
-        font-size: 15px;
+        font-size: 22px;
     }
 }
