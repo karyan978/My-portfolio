@@ -39,10 +39,10 @@
     <div id="main" data-scroll-container>
         <nav class="fixed w-full top-0 z-50 bg-gray/90 text-white backdrop-blur-sm shadow-sm z-999 "
             style="z-index:999;">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="desktop-menu" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
-                        <a href="#home" class="text-2xl font-['Pacifico'] text-primary"><img src="asset/logoA.png"
+                        <a href="#home" id="logo" class="text-2xl font-['Pacifico'] text-primary"><img src="asset/logoA.png"
                                 class="w-42 h-12" alt=""></a>
                     </div>
                     <div class="hidden md:flex items-center space-x-8">
@@ -70,7 +70,6 @@
                 </div>
             </div>
 
-            <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="#home"
