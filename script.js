@@ -121,7 +121,7 @@ tl3.from(".skill-card i, .skill-card img", {
     y: 30,
     opacity: 0,
     duration: 1,
-    deley: 0.5,
+    delay: 0.5,
     stagger: 0.3,
 })
 var tl4 = gsap.timeline({scrollTrigger:{
@@ -370,14 +370,14 @@ tl6.from("#contact-animation", {
     x: -30,
     opacity: 0,
     duration: 1,
-    deley: 0.5,
+    delay: 0.5,
     stagger: 0.3,
 })
 tl6.from("#contact-form", {
     x: 30,
     opacity: 0,
     duration: 0.5,
-    deley: 0.5,
+    delay: 0.5,
     stagger: 0.3,
 })
 
